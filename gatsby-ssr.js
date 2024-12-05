@@ -1,12 +1,9 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
- */
+// gatsby-ssr.jsx
 
-/**
- * @type {import('gatsby').GatsbySSR['onRenderBody']}
- */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+import * as React from "react"
+import { ChakraProvider } from "@chakra-ui/react"
+
+export const wrapRootElement = ({ element }) => (
+  // Or ChakraBaseProvider if you only want to compile the default Chakra theme tokens
+  <ChakraProvider>{element}</ChakraProvider>
+)

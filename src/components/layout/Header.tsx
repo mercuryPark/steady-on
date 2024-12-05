@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react"
 
 const Header = () => {
-  const elementRef = useRef(null)
+  const elementRef = useRef<any>(null)
   useEffect(() => {
     const handleScroll = () => {
       if (elementRef.current) {

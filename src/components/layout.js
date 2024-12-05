@@ -1,12 +1,12 @@
 import * as React from "react"
-// import { Link } from "gatsby"
 
 // * components
 import Header from "./layout/Header"
 import Main from "./layout/Main"
 import Footer from "./layout/Footer"
+import { ChakraProvider } from "@chakra-ui/react"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, posts }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
 
@@ -25,11 +25,13 @@ const Layout = ({ location, title, children }) => {
   // }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </div>
+    <ChakraProvider>
+      <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <Header />
+        <Main posts={posts}>{children}</Main>
+        <Footer />
+      </div>
+    </ChakraProvider>
   )
 }
 

@@ -23,6 +23,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: true,
+        isUsingColorMode: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
