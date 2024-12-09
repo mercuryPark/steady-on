@@ -1,17 +1,16 @@
 import React from "react"
 import Category from "../posts/category/Layout"
 import ShowCase from "../showcase/Layout"
-import PostList from "../posts/list/Layout"
 
-const Main = ({ children, posts }) => {
+const Main = ({ children, posts }: any) => {
   return (
-    <div className="mt-36">
+    <div className="mt-36 flex justify-center">
       <div className="relative flex flex-col gap-4 ">
         <Category />
         <ShowCase />
-        <PostList posts={posts} />
+        {/* <PostList posts={posts} /> */}
+        <div className="w-4/5 mx-auto">{children}</div>
       </div>
-      {children}
     </div>
   )
 }

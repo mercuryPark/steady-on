@@ -6,9 +6,10 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const blogList = path.resolve(`./src/templates/blog-list.js`)
+const blogHome = path.resolve(`./src/templates/blog-home.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -40,10 +41,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMarkdownRemark.nodes
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+  // 페이지네이션 설정
+  const postsPerPage = 1 // 페이지당 포스트 수
+  const numPages = Math.ceil(posts.length / postsPerPage)
 
+  // Home Page
+  createPage({
+    path: "/",
+    component: blogHome,
+  })
+
+  // Route Page
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: `/${i + 1}`,
+      component: blogList,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
+  // Detail Page
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id

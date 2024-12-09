@@ -7,26 +7,22 @@ import Footer from "./layout/Footer"
 import { ChakraProvider } from "@chakra-ui/react"
 
 const Layout = ({ location, title, children, posts }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-
-  // if (isRootPath) {
-  //   header = (
-  //     <h1 className="main-heading">
-  //       <Link to="/">{title}</Link>
-  //     </h1>
-  //   )
-  // } else {
-  //   header = (
-  //     <Link className="header-link-home" to="/">
-  //       {title}
-  //     </Link>
-  //   )
-  // }
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // const isRootPath = location.pathname === rootPath
 
   return (
     <ChakraProvider>
-      <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <div
+        className={[
+          window.location.pathname !== "/"
+            ? "max-w-[72rem] max-xl:max-w-[56rem]"
+            : "max-w-[56rem]",
+          "mx-auto max-lg:mx-12 ",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        // data-is-root-path={isRootPath}
+      >
         <Header />
         <Main posts={posts}>{children}</Main>
         <Footer />

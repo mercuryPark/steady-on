@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react"
+import { Link } from "gatsby"
 
 const Header = () => {
   const elementRef = useRef<any>(null)
@@ -27,7 +28,10 @@ const Header = () => {
       className="bg-white z-50 font-bold fixed w-full left-0 top-0 p-6 transition-all duration-100"
     >
       <div className="flex justify-between">
-        <h1>Steady On</h1>
+        <Link to={"/"} itemProp="url">
+          <h1>Steady On</h1>
+        </Link>
+
         <div className="flex gap-4 text-sm">
           <span>About</span>
           <button>Dark Mode</button>
