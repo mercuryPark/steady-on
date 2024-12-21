@@ -6,7 +6,10 @@ import Main from "./layout/Main"
 import Footer from "./layout/Footer"
 import { ChakraProvider } from "@chakra-ui/react"
 
-const Layout = ({ location, title, children, posts }) => {
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+const Layout = ({ location, title, children, posts, tags }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
   // const isRootPath = location.pathname === rootPath
 
@@ -24,7 +27,9 @@ const Layout = ({ location, title, children, posts }) => {
         // data-is-root-path={isRootPath}
       >
         <Header />
-        <Main posts={posts}>{children}</Main>
+        <Main posts={posts} tags={tags}>
+          {children}
+        </Main>
         <Footer />
       </div>
     </ChakraProvider>

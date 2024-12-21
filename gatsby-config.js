@@ -24,6 +24,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-typescript`,
+
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
@@ -46,9 +47,28 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-remark-table-of-contents`,
+      options: {
+        // 설정 옵션
+        exclude: "Table of Contents", // TOC에서 제외할 헤딩
+        tight: true,
+        ordered: true,
+        fromHeading: 1, // 최소 헤딩 레벨
+        toHeading: 6, // 최대 헤딩 레벨
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              maintainCase: false, // 대소문자 구분 없이 id를 생성
+              removeAccents: true, // 악센트나 특수문자 제거
+              isIconAfterHeader: false,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

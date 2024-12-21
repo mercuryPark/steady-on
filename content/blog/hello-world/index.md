@@ -2,6 +2,12 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+signboard: true
+tags:
+  - JavaScript
+  - React
+  - Gatsby
+  - One
 ---
 
 This is my first post on my new fake blog! How exciting!
@@ -23,7 +29,7 @@ Oh, and here's a great quote from this Wikipedia on
 
 You can also write code blocks here!
 
-```js
+```jsX
 const saltyDuckEgg = "chinese preserved food product"
 ```
 

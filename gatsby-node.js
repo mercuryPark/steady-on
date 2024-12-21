@@ -10,6 +10,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
 const blogList = path.resolve(`./src/templates/blog-list.js`)
 const blogHome = path.resolve(`./src/templates/blog-home.js`)
+const blogTags = path.resolve(`./src/templates/blog-tags.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -26,6 +27,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           fields {
             slug
           }
+          frontmatter {
+            tags
+            signboard
+            shorts
+            thumbnail_image {
+              childImageSharp {
+                gatsbyImageData(width: 300, placeholder: BLURRED)
+              }
+            }
+          }
+          tableOfContents
+        }
+      }
+    }
+  `)
+
+  const tagResult = await graphql(`
+    {
+      allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
         }
       }
     }
@@ -40,6 +63,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const tags = tagResult.data.allMarkdownRemark.group
 
   // 페이지네이션 설정
   const postsPerPage = 1 // 페이지당 포스트 수
@@ -49,6 +73,38 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPage({
     path: "/",
     component: blogHome,
+    context: {
+      tags: tags.map(tag => ({
+        name: tag.fieldValue,
+        count: tag.totalCount,
+      })),
+    },
+  })
+
+  // Tags Page
+  createPage({
+    path: `/tags`,
+    component: blogTags,
+    context: {
+      tags: tags.map(tag => ({
+        name: tag.fieldValue,
+        count: tag.totalCount,
+      })),
+    },
+  })
+
+  // Individual Tag Pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tag/${tag.fieldValue}/`,
+      component: blogTags,
+      context: {
+        tags: tags.map(tag => ({
+          name: tag.fieldValue,
+          count: tag.totalCount,
+        })),
+      },
+    })
   })
 
   // Route Page
@@ -72,7 +128,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: `/posts${post.fields.slug}`,
         component: blogPost,
         context: {
           id: post.id,
@@ -138,6 +194,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      tags: [String]
+      signboard : Boolean
+      shorts: Boolean
     }
 
     type Fields {

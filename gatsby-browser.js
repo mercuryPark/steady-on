@@ -18,3 +18,9 @@ export const wrapRootElement = ({ element }) => (
   // Or ChakraBaseProvider if you only want to compile the default Chakra theme tokens
   <ChakraProvider>{element}</ChakraProvider>
 )
+
+export const onRouteUpdate = () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+  }, 0)
+}

@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+  z-index: 1000;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SBAggroB";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Pretendard-Regular";
+  scroll-behavior: smooth;
+}
+
+#title {
+  font-family: "SBAggroB";
+}
+
+.toc a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.toc li > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.toc li > p {
+  margin-bottom: 0;
+}
+
+.toc li {
+  margin-bottom: 0;
+  text-align: start;
+}
+
+.toc a.active {
+  font-weight: bold;
+  color: #007acc;
+  border-left: 3px solid #007acc;
+  padding-left: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 72px;
+}
+
+.signboard .slick-dots {
+  position: absolute;
+  top: -36px;
+  right: 100px;
+  text-align: right !important;
+}
+.signboard .slick-dots li {
+  /* margin: 0 2px; */
+  /* width: 30px; */
+  height: 30px;
+}
+.signboard .slick-dots li button {
+  width: 18px;
+  height: 18px;
+  border: 2px solid gray;
+  border-radius: 100%;
+}
+
+.signboard .slick-dots .slick-active button {
+  border-radius: 100%;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.signboard .slick-dots li button:before {
+  display: none;
+  content: none;
+}

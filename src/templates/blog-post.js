@@ -14,7 +14,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className="flex gap-12">
+      <div className="flex gap-12 h-full">
         <article
           className="blog-post"
           itemScope
@@ -33,7 +33,7 @@ const BlogPostTemplate = ({
             <Bio />
           </footer>
         </article>
-        <ListTocLayout />
+        <ListTocLayout items={post.tableOfContents} />
       </div>
 
       <nav className="blog-post-nav">
@@ -92,6 +92,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
