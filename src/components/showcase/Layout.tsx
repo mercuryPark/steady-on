@@ -3,6 +3,9 @@ import React from "react"
 import SignBoard from "./Signboard"
 import Shorts from "./Shorts"
 
+import _ from "lodash"
+import { motion } from "framer-motion"
+
 const ShowCaseLayout = ({
   path,
   posts,
@@ -13,10 +16,16 @@ const ShowCaseLayout = ({
   if (path.length === 2) {
     return (
       <div className="h-[500px]">
-        <div className="flex gap-5 h-full">
+        <motion.div
+          initial={{ x: "-5%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: "100%", opacity: 0 }}
+          transition={{ type: "tween", duration: 1.2 }}
+          className="flex gap-5 h-full"
+        >
           <SignBoard posts={posts} />
           <Shorts posts={posts} />
-        </div>
+        </motion.div>
       </div>
     )
   }

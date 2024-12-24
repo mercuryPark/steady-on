@@ -134,6 +134,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+          tags: post.frontmatter.tags,
+          allPosts: posts,
         },
       })
     })

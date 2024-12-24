@@ -13,9 +13,12 @@ thumbnail_image: "./React.png"
 ## Gatsby.js로 블로그 만들기
 
 이 글은 Gatsby.js에서 Table of Contents (TOC)를 구현하는 방법을 테스트하기 위한 예시 글입니다.
+이 글은 Gatsby.js에서 Table of Contents (TOC)를 구현하는 방법을 테스트하기 위한 예시 글입니다.
 
 ## 개요
 
+Gatsby.js에서 TOC를 자동 생성하고 활성화(active) 효과를 주는 작업을 다룹니다.
+Gatsby.js에서 TOC를 자동 생성하고 활성화(active) 효과를 주는 작업을 다룹니다.
 Gatsby.js에서 TOC를 자동 생성하고 활성화(active) 효과를 주는 작업을 다룹니다.
 
 ---
@@ -31,6 +34,8 @@ TOC를 자동 생성하기 위해 `gatsby-remark-table-of-contents`와 `gatsby-r
 ## 2단계: TOC 컴포넌트 생성
 
 TOC를 렌더링하는 React 컴포넌트를 작성합니다.
+
+![image](./React.png)
 
 ### Scroll 이벤트 처리
 

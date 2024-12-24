@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import { Link } from "gatsby"
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
 
 const Header = () => {
   const elementRef = useRef<any>(null)
@@ -25,16 +26,18 @@ const Header = () => {
   return (
     <div
       ref={elementRef}
-      className="bg-white z-50 font-bold fixed w-full left-0 top-0 p-6 transition-all duration-100"
+      className="bg-white z-[99999] font-bold fixed w-full left-0 top-0 px-6 py-4 transition-all duration-100"
     >
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between">
         <Link to={"/"} itemProp="url">
           <h1>Steady On</h1>
         </Link>
 
-        <div className="flex gap-4 text-sm">
+        <div className="flex items-center gap-4 text-sm">
           <span>About</span>
-          <button>Dark Mode</button>
+          <button className="shadow-md ring-1 ring-gray-300 rounded-full p-2">
+            <MoonIcon className="size-4" />
+          </button>
         </div>
       </div>
     </div>

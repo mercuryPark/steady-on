@@ -75,6 +75,7 @@ h6 {
   top: -36px;
   right: 100px;
   text-align: right !important;
+  height: 0px;
 }
 .signboard .slick-dots li {
   /* margin: 0 2px; */
@@ -97,4 +98,23 @@ h6 {
 .signboard .slick-dots li button:before {
   display: none;
   content: none;
+}
+
+/* blog post style */
+.blog-post {
+  text-align: start;
+}
+
+.blog-post p {
+  line-height: 2;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.blog-post h2 {
+  line-height: 1.2;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
 }

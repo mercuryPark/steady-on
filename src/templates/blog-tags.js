@@ -26,6 +26,11 @@ export const blogTagsQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             tags
+            thumbnail_image {
+              childImageSharp {
+                gatsbyImageData(width: 300, placeholder: BLURRED)
+              }
+            }
           }
           excerpt
         }

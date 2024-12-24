@@ -14,7 +14,7 @@ const ListTocLayout = ({ items }: any): any => {
       let currentHeading = ""
       headings.forEach(heading => {
         const { top } = heading.getBoundingClientRect()
-        if (top <= 100) {
+        if (top <= 120) {
           currentHeading = heading.id
         }
       })
