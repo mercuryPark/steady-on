@@ -36,7 +36,7 @@
 .toc a {
   text-decoration: none;
   color: #555;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .toc li > ul {
@@ -55,9 +55,9 @@
 
 .toc a.active {
   font-weight: bold;
-  color: #007acc;
-  border-left: 3px solid #007acc;
-  padding-left: 8px;
+  color: black;
+  /* border-left: 3px solid #007acc; */
+  padding-left: 4px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -107,7 +107,7 @@ h6 {
 
 .blog-post p {
   line-height: 2;
-  margin-top: 16px;
+  margin-top: 20px;
   font-size: 16px;
 }
 
@@ -117,4 +117,46 @@ h6 {
   margin-bottom: 40px;
   font-size: 32px;
   font-weight: 700;
+}
+
+.blog-post h2:first-child {
+  line-height: 1.2;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.blog-post h3 {
+  /* margin-top: 80px;
+  margin-bottom: 40px; */
+
+  font-size: 24px;
+  line-height: 1.33;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.blog-post h4 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.blog-post a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.blog-post .img-description {
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+  color: #555;
+}
+
+.blog-post img {
 }

@@ -16,7 +16,7 @@ const PostCard = ({ post, imageClassName }: any) => {
             <GatsbyImage
               image={image}
               className="object-contain w-full h-full rounded-lg"
-              alt=""
+              alt="image"
             />
           )}
         </div>
@@ -33,17 +33,19 @@ const PostCard = ({ post, imageClassName }: any) => {
           {_.map(post.node.frontmatter.tags, (tag: string, index: number) => {
             const className = _.find(TAGS, { type: tag })?.styleClassName
             return (
-              <li
-                key={`post-key-${tag}`}
-                className={[
-                  className ? className : "bg-gray-500",
-                  `text-white shadow-md rounded-2xl px-2 leading-3 py-1 `,
-                  ,
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                <span className="text-xs font-semibold ">{tag}</span>
+              <li key={`post-key-${tag}`}>
+                <span
+                  className={[
+                    className
+                      ? className
+                      : "bg-gray-50 text-gray-600 ring-gray-500/10",
+                    `inline-flex items-center rounded-md  text-xs px-2 py-1 font-medium  ring-1 ring-inset`,
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  {tag}
+                </span>
               </li>
             )
           })}

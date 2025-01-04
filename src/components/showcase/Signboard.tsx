@@ -12,7 +12,7 @@ import {
 const SignBoard = ({ posts }: any) => {
   const sliderRef = useRef<any>(null)
   const [isAutoplaying, setIsAutoplaying] = useState(true)
-
+  console.log(posts)
   const [signboardPosts, setSignboardPosts] = useState<any>([])
 
   const toggleAutoplay = () => {

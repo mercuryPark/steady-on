@@ -30,7 +30,7 @@ const Main = ({ children, posts, tags }: any) => {
         <ShowCase path={path} posts={blogPosts} />
         <PostListLayout posts={blogPosts} />
 
-        <div className="w-full px-12 mx-auto">{children}</div>
+        <div className="w-full mx-auto">{children}</div>
       </div>
     </div>
   )

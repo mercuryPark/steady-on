@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
+import moment from "moment"
+import "moment/locale/ko"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -8,42 +10,34 @@ import ListTocLayout from "../components/posts/list/toc/Layout"
 import RecommendPosts from "../components/posts/details/RecommendPosts"
 
 const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
+  data: { previous, next, site, markdownRemark: post, allMarkdownRemark },
   pageContext,
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
   const { tags: currentTags, allPosts } = pageContext
-
-  const relatedPosts = allPosts.filter(post => {
-    return post.frontmatter.tags?.some(tag => currentTags?.includes(tag))
-  })
+  const relatedPosts = allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className="flex gap-12 h-full">
-        <article
-          className="blog-post"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
-          <header>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
-          </header>
-          <section
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
-          />
-          <hr />
-          <footer>
-            <Bio />
-          </footer>
-        </article>
-        <ListTocLayout items={post.tableOfContents} />
-      </div>
+      <div className="flex flex-col">
+        <div className="flex gap-12 h-full">
+          <article itemScope itemType="http://schema.org/Article">
+            <section
+              className="blog-post"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
+            <hr />
 
-      <RecommendPosts posts={relatedPosts} />
+            <RecommendPosts posts={relatedPosts} />
+            <footer>
+              <Bio />
+            </footer>
+          </article>
+          <ListTocLayout items={post.tableOfContents} />
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -70,6 +64,7 @@ export const pageQuery = graphql`
         title
       }
     }
+
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
@@ -96,6 +91,31 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+      }
+    }
+
+    # 전체 포스트 목록
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            tags
+            shorts
+            signboard
+            thumbnail_image {
+              childImageSharp {
+                gatsbyImageData(width: 300, placeholder: BLURRED)
+              }
+            }
+          }
+          excerpt
+        }
       }
     }
   }

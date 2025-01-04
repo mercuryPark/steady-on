@@ -38,8 +38,8 @@ const ListTocLayout = ({ items }: any): any => {
   }, [])
 
   return (
-    <div className="w-1/3 max-xl:hidden">
-      <div className="sticky pl-[20px] flex-1 top-[120px] ">
+    <div className="w-1/2 max-xl:hidden">
+      <div className="sticky flex-1 top-[120px] ">
         <nav
           className="toc sticky"
           dangerouslySetInnerHTML={{ __html: items }}
