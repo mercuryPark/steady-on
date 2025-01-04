@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import _ from "lodash"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
+import { TAGS } from "../../../utils/constants"
 
 const Tags = ({ tags, path }: any) => {
   const [tagCount, setTagCount] = useState(0)
@@ -26,12 +27,20 @@ const Tags = ({ tags, path }: any) => {
         className="flex flex-col gap-2 items-center pl-5"
       >
         <div className="flex gap-2 w-full">
-          <h1 id="title" className="text-left font-bold text-4xl ">
+          <h1
+            id="title"
+            className={[
+              "text-left text-4xl",
+              _.find(TAGS, { type: path[2] })?.color,
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
             {path[2] ?? "All Posts"}
           </h1>
           <p className="relative bottom-2 text-gray-400 italic">({tagCount})</p>
         </div>
-        <ul className="flex gap-4 w-full">
+        <ul className="flex gap-4 w-full  mt-1 pt-2">
           {tags.map((tag: any) => {
             return (
               <li key={`key-${tag.name}`} className="text-sm ">

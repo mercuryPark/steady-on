@@ -3,10 +3,10 @@ import _ from "lodash"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { TAGS } from "../../../utils/constants"
-const PostCard = ({ post, imageClassName }: any) => {
+const PostCard = ({ post, className, imageClassName }: any) => {
   const image: any = getImage(post.node.frontmatter.thumbnail_image)
   return (
-    <div className="rounded-lg p-4 text-start z-50 min-w-[400px]">
+    <div className={`${className} rounded-lg text-start z-50 min-w-[200px]`}>
       <Link to={`/posts${post?.node?.fields?.slug}`} itemProp="url">
         {/* thumbnail image */}
         <div

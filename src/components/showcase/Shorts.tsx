@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Shorts = ({ posts }: any) => {
   return (
-    <div className="basis-1/3 text-start px-8">
+    <div className="basis-1/3 text-start px-8 max-md:hidden">
       <h1 id="title" className="text-lg font-bold pb-2">
         Shorts
       </h1>

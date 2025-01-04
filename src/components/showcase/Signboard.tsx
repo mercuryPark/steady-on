@@ -9,10 +9,31 @@ import {
   ArrowRightCircleIcon,
 } from "@heroicons/react/24/outline"
 
+const SliderFrame = ({
+  sliderRef,
+  setting,
+  children,
+  active,
+}: {
+  sliderRef: any
+  setting: any
+  children: any
+  active: boolean
+}) => {
+  if (active) {
+    return (
+      <Slider ref={sliderRef} {...setting}>
+        {children}
+      </Slider>
+    )
+  }
+
+  return children
+}
+
 const SignBoard = ({ posts }: any) => {
   const sliderRef = useRef<any>(null)
   const [isAutoplaying, setIsAutoplaying] = useState(true)
-  console.log(posts)
   const [signboardPosts, setSignboardPosts] = useState<any>([])
 
   const toggleAutoplay = () => {
@@ -93,12 +114,22 @@ const SignBoard = ({ posts }: any) => {
         </ul>
       </div>
 
-      <div className="max-w-[600px] h-[600px]">
-        <Slider ref={sliderRef} {...settings}>
+      <div className="md:max-w-[600px] h-[600px] max-md:w-[480px]">
+        <SliderFrame
+          sliderRef={sliderRef}
+          setting={settings}
+          active={signboardPosts.length > 1}
+        >
           {_.map(signboardPosts, (post: any) => {
-            return <PostCard post={post} imageClassName="h-80" />
+            return (
+              <PostCard
+                post={post}
+                className="px-4 py-2"
+                imageClassName="h-80"
+              />
+            )
           })}
-        </Slider>
+        </SliderFrame>
       </div>
     </div>
   )

@@ -31,7 +31,7 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio  rounded-lg p-3">
+    <div className="bio rounded-lg p-3 text-left ">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
@@ -43,7 +43,7 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <p className="flex flex-col">
+        <p className="flex flex-col justify-center">
           <strong className="h-7">{author.name}</strong>
           <span className="text-sm text-green-600">Frontend Developer</span>
           <span className="text-xs text-gray-500">
