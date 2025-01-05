@@ -3,6 +3,8 @@ import _ from "lodash"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { TAGS } from "../../../utils/constants"
+import moment from "moment"
+import "moment/locale/ko"
 const PostCard = ({ post, className, imageClassName }: any) => {
   const image: any = getImage(post.node.frontmatter.thumbnail_image)
   return (
@@ -25,7 +27,7 @@ const PostCard = ({ post, className, imageClassName }: any) => {
           <h1 className="font-bold text-lg">{post?.node.frontmatter?.title}</h1>
 
           <p className="text-xs text-gray-400">
-            {post?.node.frontmatter?.date}
+            {moment(post?.node.frontmatter?.date).format("ll")}
           </p>
         </div>
 

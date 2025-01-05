@@ -1,6 +1,6 @@
 ---
 title: 블로그 이제 Gatsby.js로 정착
-date: "2015-05-06T23:46:37.121Z"
+date: "2025-01-03T23:46:37.121Z"
 signboard: true
 tags:
   - JavaScript
