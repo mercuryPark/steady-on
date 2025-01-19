@@ -91,6 +91,7 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`], // AVIF 제외
+          avifOptions: { lossless: true },
           quality: 90,
         },
       },
