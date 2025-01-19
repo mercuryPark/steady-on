@@ -20,7 +20,8 @@ const Main = ({ children, posts, tags }: any) => {
   }, [colorMode])
 
   useEffect(() => {
-    let pathname: string[] | string = window.location.pathname
+    let pathname: string[] | string =
+      typeof window !== "undefined" ? window.location.pathname : ""
     pathname = _.split(pathname, "/")
     setPath(pathname)
 
@@ -32,7 +33,7 @@ const Main = ({ children, posts, tags }: any) => {
         })
       })
     }
-  }, [window.location])
+  }, [typeof window !== "undefined" && window.location])
 
   return (
     <div className="mt-36 flex justify-center">

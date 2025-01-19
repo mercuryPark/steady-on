@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (elementRef.current) {
+      if (elementRef.current && typeof window !== "undefined") {
         if (window.scrollY > 10) {
           // 100px 스크롤 시
           elementRef.current.classList.add("shadow-sm")
@@ -28,10 +28,12 @@ const Header = () => {
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll)
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
     }
   }, [])
 

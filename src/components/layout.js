@@ -34,7 +34,7 @@ const Layout = ({ location, title, children, posts, tags }) => {
     <ChakraProvider theme={theme}>
       <div
         className={[
-          window.location.pathname !== "/"
+          typeof window !== "undefined" && window.location.pathname !== "/"
             ? "max-w-[72rem] max-xl:max-w-[56rem]"
             : "max-w-[56rem]",
           "mx-auto max-lg:mx-12 ",
