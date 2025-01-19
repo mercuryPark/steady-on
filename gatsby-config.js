@@ -86,7 +86,15 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`], // AVIF 제외
+          quality: 90,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
