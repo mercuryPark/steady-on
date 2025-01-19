@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ListTocLayout from "../components/posts/list/toc/Layout"
 import RecommendPosts from "../components/posts/details/RecommendPosts"
+import Comments from "../components/posts/details/Comments"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post, allMarkdownRemark },
@@ -29,10 +30,10 @@ const BlogPostTemplate = ({
               itemProp="articleBody"
             />
             <hr />
-
             <RecommendPosts posts={relatedPosts} />
             <footer>
               <Bio />
+              <Comments />
             </footer>
           </article>
           <ListTocLayout items={post.tableOfContents} />

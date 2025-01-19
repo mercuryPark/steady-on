@@ -121,13 +121,15 @@ const SignBoard = ({ posts }: any) => {
           active={signboardPosts.length > 1}
         >
           {_.map(signboardPosts, (post: any) => {
-            return (
-              <PostCard
-                post={post}
-                className="px-4 py-2"
-                imageClassName="h-80"
-              />
-            )
+            if (!post.node.frontmatter.shorts) {
+              return (
+                <PostCard
+                  post={post}
+                  className="px-4 py-2"
+                  imageClassName="h-80"
+                />
+              )
+            }
           })}
         </SliderFrame>
       </div>

@@ -31,17 +31,17 @@ const PostCard = ({ post, className, imageClassName }: any) => {
           </p>
         </div>
 
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 flex-wrap">
           {_.map(post.node.frontmatter.tags, (tag: string, index: number) => {
             const className = _.find(TAGS, { type: tag })?.styleClassName
             return (
-              <li key={`post-key-${tag}`}>
+              <li className="card-tag !m-0" key={`post-key-${tag}`}>
                 <span
                   className={[
                     className
                       ? className
                       : "bg-gray-50 text-gray-600 ring-gray-500/10",
-                    `inline-flex items-center rounded-md  text-xs px-2 py-1 font-medium  ring-1 ring-inset`,
+                    `inline-flex items-center rounded-md  text-xs px-2 py-1 font-medium  ring-1 ring-inset `,
                   ]
                     .filter(Boolean)
                     .join(" ")}

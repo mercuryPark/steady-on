@@ -3,10 +3,21 @@ import _ from "lodash"
 import Tags from "../posts/tags/Layout"
 import ShowCase from "../showcase/Layout"
 import PostListLayout from "../posts/list/Layout"
+import { useColorMode } from "@chakra-ui/react"
 
 const Main = ({ children, posts, tags }: any) => {
   const [path, setPath] = useState<string[]>([])
   const [blogPosts, setBlogPosts] = useState(posts)
+
+  const { colorMode } = useColorMode()
+
+  useEffect(() => {
+    if (colorMode === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+  }, [colorMode])
 
   useEffect(() => {
     let pathname: string[] | string = window.location.pathname

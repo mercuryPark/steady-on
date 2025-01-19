@@ -161,3 +161,50 @@ h6 {
 
 .blog-post img {
 }
+
+.blog-post p code {
+  background-color: #f2f3f6 !important;
+  color: black;
+  padding: 3px 5px !important;
+  font-weight: 500 !important;
+}
+
+.utterances {
+  max-width: 100% !important;
+  margin: 0px !important;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #f2f3f6 !important;
+}
+
+.dark #header {
+  background-color: #1d1e25;
+}
+
+.dark .card-tag span {
+  color: #555 !important;
+}
+
+.dark .toc a {
+  color: white;
+}
+
+.dark .blog-post :not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #555;
+}
+
+.dark .blog-post p code {
+  background-color: #f2f3f6 !important;
+  color: black;
+  padding: 3px 5px !important;
+  font-weight: 500 !important;
+}
+
+.dark code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  text-shadow: none;
+}
