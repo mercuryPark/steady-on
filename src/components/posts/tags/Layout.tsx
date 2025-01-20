@@ -40,10 +40,10 @@ const Tags = ({ tags, path }: any) => {
           </h1>
           <p className="relative bottom-2 text-gray-400 italic">({tagCount})</p>
         </div>
-        <ul className="flex gap-4 w-full  mt-1 pt-2">
+        <ul className="flex flex-wrap gap-4 w-full  mt-1 pt-2">
           {tags.map((tag: any) => {
             return (
-              <li key={`key-${tag.name}`} className="text-sm ">
+              <li key={`key-${tag.name}`} className="text-sm m-0">
                 <Link to={`/tag/${tag.name}`}>
                   <h1 className="flex items-center gap-1 text-gray-500">
                     {tag.name}

@@ -28,6 +28,9 @@
   font-family: "Pretendard-Regular";
   scroll-behavior: smooth;
 }
+article {
+  overflow: auto;
+}
 
 #title {
   font-family: "SBAggroB";
@@ -207,4 +210,45 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   color: white;
   text-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .blog-post p {
+    line-height: 2;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .blog-post h2 {
+    line-height: 1.2;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .blog-post h2:first-child {
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .blog-post h3 {
+    /* margin-top: 80px;
+    margin-bottom: 40px; */
+
+    font-size: 20px;
+    line-height: 1.33;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .blog-post h4 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
 }

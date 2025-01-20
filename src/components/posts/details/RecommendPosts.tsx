@@ -10,7 +10,7 @@ const RecommendPosts = ({ posts }: any) => {
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-10">
         {_.map(posts, (post: any, i: number) => {
           if (i < 4) {
-            return <ListContent post={post} className="p-0" />
+            return <ListContent post={post} className="px-1" />
           }
         })}
       </div>

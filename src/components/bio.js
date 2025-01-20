@@ -32,11 +32,11 @@ const Bio = () => {
 
   return (
     <div className="bio rounded-lg p-3 text-left ">
-      <StaticImage
+      <img
         className="bio-avatar shadow-lg ring-1 ring-gray-200"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-image.jpeg"
+        src="/images/profile-image.jpeg"
         width={70}
         height={70}
         quality={95}

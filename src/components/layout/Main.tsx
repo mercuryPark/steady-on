@@ -36,8 +36,8 @@ const Main = ({ children, posts, tags }: any) => {
   }, [typeof window !== "undefined" && window.location])
 
   return (
-    <div className="mt-36 flex justify-center">
-      <div className="relative flex flex-col gap-12 justify-center text-center">
+    <div className="mt-36 flex flex-wrap justify-center">
+      <div className="w-full relative flex flex-col gap-12 justify-center text-center">
         <Tags path={path} tags={tags} />
         <ShowCase path={path} posts={blogPosts} />
         <PostListLayout posts={blogPosts} />

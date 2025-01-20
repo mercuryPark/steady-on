@@ -67,7 +67,7 @@ const SignBoard = ({ posts }: any) => {
   }, [posts])
 
   return (
-    <div className="signboard basis-2/3 h-full text-start relative ">
+    <div className="signboard basis-2/3 h-full text-start relative m-auto">
       <div className="flex justify-between mx-4">
         <h1 id="title" className="text-xl">
           SignBoard
@@ -114,7 +114,7 @@ const SignBoard = ({ posts }: any) => {
         </ul>
       </div>
 
-      <div className="md:max-w-[600px] h-[600px] max-md:w-[480px]">
+      <div className="md:max-w-[600px] h-[600px] max-md:w-[480px] max-sm:w-[400px]">
         <SliderFrame
           sliderRef={sliderRef}
           setting={settings}
