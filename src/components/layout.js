@@ -37,7 +37,7 @@ const Layout = ({ location, title, children, posts, tags }) => {
           typeof window !== "undefined" && window.location.pathname !== "/"
             ? "max-w-[72rem] max-xl:max-w-[56rem]"
             : "max-w-[56rem]",
-          "mx-auto max-lg:mx-12 ",
+          "mx-auto max-lg:mx-4",
         ]
           .filter(Boolean)
           .join(" ")}

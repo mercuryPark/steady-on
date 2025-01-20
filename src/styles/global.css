@@ -213,6 +213,10 @@ pre[class*="language-"] {
 }
 
 @media (max-width: 767px) {
+  .signboard .slick-dots {
+    display: none;
+  }
+
   .blog-post p {
     line-height: 2;
     margin-top: 20px;

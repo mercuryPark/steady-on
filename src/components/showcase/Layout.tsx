@@ -15,13 +15,13 @@ const ShowCaseLayout = ({
 }): any => {
   if (path.length === 2) {
     return (
-      <div className="h-[500px]">
+      <div className="w-full h-[500px]">
         <motion.div
           initial={{ x: "-5%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0 }}
           transition={{ type: "tween", duration: 1.2 }}
-          className="flex gap-5 h-full"
+          className="flex gap-5 w-full h-full"
         >
           <SignBoard posts={posts} />
           <Shorts posts={posts} />

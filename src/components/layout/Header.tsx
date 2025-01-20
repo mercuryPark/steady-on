@@ -41,7 +41,7 @@ const Header = () => {
     <div
       id="header"
       ref={elementRef}
-      className="bg-white dark:bg-[#1a202c] z-[9999999999] font-bold fixed w-full left-0 top-0 px-6 py-4 transition-all duration-100"
+      className="bg-white z-[9999999999] font-bold fixed w-full left-0 top-0 px-6 py-4 transition-all duration-100"
     >
       <div className=" flex items-center justify-between">
         <Link to={"/"} itemProp="url">
