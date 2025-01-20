@@ -24,7 +24,7 @@ const Tags = ({ tags, path }: any) => {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: "100%", opacity: 0 }}
         transition={{ type: "tween", duration: 1.2 }}
-        className="flex flex-col gap-2 items-center pl-5"
+        className="flex flex-col gap-2 items-center pl-5 mt-6 max-md:mt-12"
       >
         <div className="flex gap-2 w-full">
           <h1
