@@ -6,7 +6,7 @@ shorts: true
 tags:
   - JavaScript
   - Shorts
-  - UI/UX
+  - UI
 thumbnail_image: "./scale.png"
 ---
 

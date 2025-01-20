@@ -7,7 +7,7 @@ tags:
   - JavaScript
   - Theory
   - React
-  - 새 창 프로젝트
+  - Project
 thumbnail_image: "./forwarding-data.png"
 ---
 
