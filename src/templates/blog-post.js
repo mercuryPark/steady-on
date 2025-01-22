@@ -21,7 +21,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <div className="flex flex-col max-w-[56rem] mx-auto max-lg:mx-4">
+      <div className="flex flex-col ">
         <div className="flex gap-12 h-full ">
           <article itemScope itemType="http://schema.org/Article">
             <section

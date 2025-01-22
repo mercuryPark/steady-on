@@ -8,11 +8,7 @@ const BlogTags = ({ pageContext, data }) => {
   const { tags } = pageContext
   const posts = data.allMarkdownRemark.edges
 
-  return (
-    <div className="max-w-[56rem] mx-auto max-lg:mx-4">
-      <Layout posts={posts} tags={tags} />
-    </div>
-  )
+  return <Layout posts={posts} tags={tags} />
 }
 
 export default BlogTags

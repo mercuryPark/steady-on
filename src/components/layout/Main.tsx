@@ -4,6 +4,7 @@ import Tags from "../posts/tags/Layout"
 import ShowCase from "../showcase/Layout"
 import PostListLayout from "../posts/list/Layout"
 import { useColorMode } from "@chakra-ui/react"
+import Container from "./Container"
 
 const Main = ({ children, posts, tags }: any) => {
   const [path, setPath] = useState<string[]>([])
@@ -36,15 +37,17 @@ const Main = ({ children, posts, tags }: any) => {
   }, [typeof window !== "undefined" && window.location])
 
   return (
-    <div className="mt-24 max-md:mt-12 flex flex-wrap justify-center">
-      <div className="w-full relative flex flex-col gap-12 justify-center text-center">
-        <Tags path={path} tags={tags} />
-        <ShowCase path={path} posts={blogPosts} />
-        <PostListLayout posts={blogPosts} />
+    <Container path={path}>
+      <div className="mt-24 max-md:mt-12 flex flex-wrap justify-center">
+        <div className="w-full relative flex flex-col gap-12 justify-center text-center">
+          <Tags path={path} tags={tags} />
+          <ShowCase path={path} posts={blogPosts} />
+          <PostListLayout posts={blogPosts} />
 
-        <div className="w-full mx-auto">{children}</div>
+          <div className="w-full mx-auto">{children}</div>
+        </div>
       </div>
-    </div>
+    </Container>
   )
 }
 
