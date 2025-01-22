@@ -32,17 +32,7 @@ const Layout = ({ location, title, children, posts, tags }) => {
 
   return (
     <ChakraProvider theme={theme}>
-      <div
-        className={[
-          typeof window !== "undefined" && window.location.pathname !== "/"
-            ? "max-w-[72rem] max-xl:max-w-[56rem]"
-            : "max-w-[56rem]",
-          "mx-auto max-lg:mx-4",
-        ]
-          .filter(Boolean)
-          .join(" ")}
-        // data-is-root-path={isRootPath}
-      >
+      <div>
         <Header />
         <Main posts={posts} tags={tags}>
           {children}
