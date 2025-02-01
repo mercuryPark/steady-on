@@ -1,5 +1,6 @@
 ---
 title: 이벤트 루프 레스토랑
+subtitle: 자바스크립트의 이벤트 루프에 대한 상황극
 date: "2025-01-08T23:46:37.121Z"
 signboard: true
 shorts: true

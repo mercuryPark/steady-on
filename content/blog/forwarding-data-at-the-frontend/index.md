@@ -1,5 +1,6 @@
 ---
 title: 새 창에게 데이터 전달하기
+subtitle: 웹앱에서 팝업 사용하기
 date: "2025-01-12T23:46:37.121Z"
 signboard: true
 shorts: false

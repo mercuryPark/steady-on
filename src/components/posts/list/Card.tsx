@@ -1,26 +1,49 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import _ from "lodash"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { TAGS } from "../../../utils/constants"
 import moment from "moment"
 import "moment/locale/ko"
+import { motion } from "framer-motion"
+
 const PostCard = ({ post, className, imageClassName }: any) => {
   const image: any = getImage(post.node.frontmatter.thumbnail_image)
+
+  const [showSubtitle, setShowSubtitle] = useState(false)
   return (
-    <div className={`${className} rounded-lg text-start z-50 min-w-[200px]`}>
+    <div
+      className={`${className} rounded-lg text-start z-50 min-w-[200px]`}
+      onMouseOver={() => {
+        setShowSubtitle(true)
+      }}
+      onMouseLeave={() => {
+        setShowSubtitle(false)
+      }}
+    >
       <Link to={`/posts${post?.node?.fields?.slug}`} itemProp="url">
         {/* thumbnail image */}
         <div
-          className={`w-full ${imageClassName} mb-2 rounded-lg shadow-lg ring-1 ring-gray-200`}
+          className={`w-full ${imageClassName} mb-2 rounded-lg shadow-lg ring-1 ring-gray-200 relative `}
         >
           {image && (
             <GatsbyImage
               image={image}
-              className="object-contain w-full h-full rounded-lg"
+              className="object-contain w-full  h-full rounded-lg hover:bg-black"
               alt="image"
             />
           )}
+
+          <motion.div
+            whileHover={{ opacity: 1, transition: { delay: 0 } }}
+            initial={{ opacity: 0 }}
+            className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.4)] text-white flex items-end rounded-lg"
+          >
+            <p className="px-4 py-3 font-semibold">
+              {post?.node.frontmatter?.subtitle ??
+                moment(post?.node.frontmatter?.date).format("ll")}
+            </p>
+          </motion.div>
         </div>
 
         <div className="py-2">

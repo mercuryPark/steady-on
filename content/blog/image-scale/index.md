@@ -1,5 +1,6 @@
 ---
 title: 이미지 비율 맞추기
+subtitle: 이미지 사이즈 정상화를 위해서
 date: "2025-01-14T23:46:37.121Z"
 signboard: true
 shorts: true

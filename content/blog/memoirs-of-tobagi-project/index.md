@@ -1,5 +1,6 @@
 ---
 title: 지인들과 웹 서비스 만들기(토박이 프로젝트)
+subtitle: 동네 정보 공유 플랫폼
 date: "2024-10-15T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 signboard: true

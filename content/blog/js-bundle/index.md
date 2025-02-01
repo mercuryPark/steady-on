@@ -1,5 +1,6 @@
 ---
 title: JS 복습노트
+subtitle: 자바스크립트 고수가 되는 그날까지
 date: "2025-01-22T23:46:37.121Z"
 signboard: true
 shorts: true

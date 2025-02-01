@@ -24,6 +24,7 @@ export const blogTagsQuery = graphql`
           }
           frontmatter {
             title
+            subtitle
             date(formatString: "MMMM DD, YYYY")
             tags
             thumbnail_image {

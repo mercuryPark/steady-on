@@ -23,6 +23,7 @@ export const blogHomeQuery = graphql`
           }
           frontmatter {
             title
+            subtitle
             date(formatString: "MMMM DD, YYYY")
             tags
             shorts
