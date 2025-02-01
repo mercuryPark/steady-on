@@ -10,17 +10,8 @@ import { motion } from "framer-motion"
 const PostCard = ({ post, className, imageClassName }: any) => {
   const image: any = getImage(post.node.frontmatter.thumbnail_image)
 
-  const [showSubtitle, setShowSubtitle] = useState(false)
   return (
-    <div
-      className={`${className} rounded-lg text-start z-50 min-w-[200px]`}
-      onMouseOver={() => {
-        setShowSubtitle(true)
-      }}
-      onMouseLeave={() => {
-        setShowSubtitle(false)
-      }}
-    >
+    <div className={`${className} rounded-lg text-start z-50 min-w-[200px]`}>
       <Link to={`/posts${post?.node?.fields?.slug}`} itemProp="url">
         {/* thumbnail image */}
         <div

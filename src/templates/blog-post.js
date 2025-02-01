@@ -73,6 +73,7 @@ export const pageQuery = graphql`
       tableOfContents
       frontmatter {
         title
+        subtitle
         date(formatString: "MMMM DD, YYYY")
         description
         tags
@@ -105,6 +106,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            subtitle
             date(formatString: "MMMM DD, YYYY")
             tags
             shorts
