@@ -13,7 +13,8 @@ const Header = () => {
     //   localStorage.setItem("darkMode", JSON.stringify(!prev))
     //   return !prev
     // })
-    toggleColorMode()
+    // ! 일시 비활성화
+    // toggleColorMode()
   }
 
   useEffect(() => {

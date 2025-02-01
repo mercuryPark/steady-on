@@ -1,6 +1,7 @@
 import React from "react"
 import _ from "lodash"
 import { Link } from "gatsby"
+import moment from "moment"
 
 const Shorts = ({ posts }: any) => {
   return (
@@ -17,7 +18,7 @@ const Shorts = ({ posts }: any) => {
                   {post?.node.frontmatter?.title}
                 </h1>
                 <p className="text-xs text-gray-400">
-                  {post?.node.frontmatter?.date}
+                  {moment(post?.node.frontmatter?.date).format("ll")}
                 </p>
               </div>
             </Link>
