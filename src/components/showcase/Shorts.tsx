@@ -6,7 +6,7 @@ import moment from "moment"
 const Shorts = ({ posts }: any) => {
   return (
     <div className="basis-1/3 text-start px-8 max-md:hidden">
-      <h1 id="title" className="text-lg font-bold pb-2">
+      <h1 id="title" className="text-lg pb-2">
         Shorts
       </h1>
       {_.map(posts, (post: any) => {
