@@ -15,12 +15,12 @@ const PostCard = ({ post, className, imageClassName }: any) => {
       <Link to={`/posts${post?.node?.fields?.slug}`} itemProp="url">
         {/* thumbnail image */}
         <div
-          className={`w-full ${imageClassName} mb-2  rounded-lg shadow-lg ring-1 ring-gray-200 relative `}
+          className={`w-full ${imageClassName} mb-2  rounded-lg shadow-lg ring-1 ring-gray-200 relative`}
         >
           {image && (
             <GatsbyImage
               image={image}
-              className="object-contain  h-full w-full  rounded-lg hover:bg-black"
+              className="w-full object-contain h-full  rounded-lg hover:bg-black"
               alt="image"
             />
           )}
