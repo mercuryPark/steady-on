@@ -9,7 +9,7 @@ tags:
   - Theory
   - React
   - Project
-thumbnail_image: "./forwarding-data.png"
+thumbnail_image: "./broadcast_thumbnail.jpeg"
 ---
 
 ## 프로젝트를 시작하게 된 계기 (1)

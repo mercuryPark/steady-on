@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - Shorts
   - UI
-thumbnail_image: "./scale.png"
+thumbnail_image: "./imagescale_thumbnail.jpeg"
 ---
 
 ## 일반적인 이미지 크기 설정

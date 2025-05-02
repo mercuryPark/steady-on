@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - Theory
   - Shorts
-thumbnail_image: "./js-bundle.png"
+thumbnail_image: "./javascript_thumbnail.jpeg"
 ---
 
 ## 복습해볼까요.

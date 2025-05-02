@@ -3,11 +3,11 @@ title: Proxy는 언제사용할까?
 subtitle: Proxy를 실제로 사용해볼수 있을까?
 date: "2025-02-23T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
-signboard: true
+signboard: false
 tags:
   - JavaScript
   - Theory
-thumbnail_image: "./proxy-thumbnail.jpeg"
+thumbnail_image: "./proxy_thumbnail.jpeg"
 ---
 
 ## Proxy란?

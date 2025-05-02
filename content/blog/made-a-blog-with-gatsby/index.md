@@ -2,12 +2,12 @@
 title: 블로그 이제 Gatsby.js로 정착
 subtitle: 블로그는 시작이 반이다.
 date: "2025-01-03T23:46:37.121Z"
-signboard: true
+signboard: false
 tags:
   - JavaScript
   - React
   - Gatsby
-thumbnail_image: "./gatsbyjs.jpg"
+thumbnail_image: "./gatsby_thumbnail.jpeg"
 ---
 
 ## 블로그 이제 Gatsby.js로 정착

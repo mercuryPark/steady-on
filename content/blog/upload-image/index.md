@@ -3,11 +3,11 @@ title: 이미지 업로드하기
 subtitle: 이미지 업로드 프로세스
 date: "2025-04-14T23:46:37.121Z"
 signboard: true
-shorts: true
+shorts: false
 tags:
   - JavaScript
   - Theory
-thumbnail_image: "./upload-image.png"
+thumbnail_image: "./imageupload_thumbnail.jpeg"
 ---
 
 ## 시작

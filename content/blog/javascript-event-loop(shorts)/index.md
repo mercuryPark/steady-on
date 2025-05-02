@@ -3,12 +3,12 @@ title: 이벤트 루프 이해하기
 subtitle: 자바스크립트의 이벤트 루프
 date: "2025-01-08T23:46:37.121Z"
 signboard: true
-shorts: true
+shorts: false
 tags:
   - JavaScript
   - Theory
   - Shorts
-thumbnail_image: "./web-apis.png"
+thumbnail_image: "./eventloop_thumbnail.jpeg"
 ---
 
 ## 비동기처리는 어려워
