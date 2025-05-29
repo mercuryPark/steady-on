@@ -11,7 +11,7 @@ const blogPost = path.resolve(`./src/templates/blog-post.js`)
 const blogList = path.resolve(`./src/templates/blog-list.js`)
 const blogHome = path.resolve(`./src/templates/blog-home.js`)
 const blogTags = path.resolve(`./src/templates/blog-tags.js`)
-
+const profile = path.resolve(`./src/templates/profile.js`)
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
@@ -79,6 +79,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         count: tag.totalCount,
       })),
     },
+  })
+
+  // ProfilePage
+  createPage({
+    path: "/profile",
+    component: profile,
   })
 
   // Tags Page

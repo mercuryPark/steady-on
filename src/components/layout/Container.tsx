@@ -12,10 +12,14 @@ const Container = ({ path, children }: any) => {
     if (_.includes(path, "posts")) {
       setWidth("max-w-[72rem]")
     }
+
+    if (_.includes(path, "profile")) {
+      setWidth("max-w-[70rem]")
+    }
   }, [path])
 
   return (
-    <div className={`mx-auto max-lg:mx-6 ${width} max-xl:max-w-[56rem]`}>
+    <div className={`mx-auto max-lg:mx-6  max-xl:max-w-[56rem] ${width}`}>
       {children}
     </div>
   )

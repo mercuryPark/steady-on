@@ -51,7 +51,9 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-4 text-sm">
-          <span>About</span>
+          <Link to={"/profile"}>
+            <button>About</button>
+          </Link>
           <button
             onClick={handleClickDarkMode}
             className="shadow-md ring-1 ring-gray-300 rounded-full p-2 transition-all delay-200 relative"

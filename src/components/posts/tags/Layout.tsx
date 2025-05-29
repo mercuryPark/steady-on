@@ -17,7 +17,7 @@ const Tags = ({ tags, path }: any) => {
     })
   }, [path])
 
-  if (path.length > 1 && path[1] !== "posts") {
+  if (path.length > 1 && path[1] !== "posts" && path[1] !== "profile") {
     return (
       <motion.div
         initial={{ y: "-20%", opacity: 0 }}
