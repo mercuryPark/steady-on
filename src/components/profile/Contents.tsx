@@ -24,17 +24,12 @@ const ProfileContents = () => {
         기업용 메신저의 <Bubble type="lime">Browser와 WebApp</Bubble>
         프론트엔드를 담당하고 있어요.
       </div>,
-      <div>
-        맡은 프로젝트의 초기환경 세팅과 유지보수까지 폭넓게 경험해봤어요.
-      </div>,
+
       <div>
         <Bold>확장성이 좋고 직관적인 오픈소스 라이브러리</Bold>를 조사하고
         적용해보는 것을 좋아해요.
       </div>,
-      <div>
-        WebView로 계약정보를 보여주는 페이지를 개발해 각 클라이언트 개발 공수를
-        줄여봤어요.
-      </div>,
+
       <div>
         WebApp의 <Bubble type="lime">새 창 프로세스</Bubble>를 도입해 사용자
         경험을 개선해봤어요.
@@ -44,11 +39,11 @@ const ProfileContents = () => {
         있어요.
       </div>,
       <div>
-        프로젝트의 개선제안 채널을 통해 사용자의 <Bold>피드백을 즉각 반영</Bold>
+        서비스의 개선제안 채널을 통해 사용자의 <Bold>피드백을 즉각 대응</Bold>
         하고있어요.
       </div>,
       <div>
-        Github 오픈포럼을 통해 프로젝트
+        Github 오픈포럼을 활용해 프로젝트
         <Bubble type="lime">Trouble Shooting을 경험</Bubble>
         해봤어요.
       </div>,
@@ -68,21 +63,26 @@ const ProfileContents = () => {
         서비스의 <Bold>사용자경험(UX)</Bold>을 중요시해 습관적으로 비교하고
         테스트해요.
       </div>,
-      <div>
-        <Bubble type="orange">팀원 및 사내 동료들과의 커뮤니케이션</Bubble>을
-        중요시해 사내 동호회 회장을 맡고있어요.
-      </div>,
+
       <div>
         <Bold>Trouble Shooting</Bold>후에는 기록 및 회고를 적극적으로
         하고있어요.
       </div>,
-      <div>
-        팀원들과 같이 정보공유 채널방을 운영하며, 각 직무에 대한 정보를
-        공유하고있어요.
-      </div>,
     ],
   }
-
+  //   const communication = {
+  //     title: "Communication",
+  //     list: [
+  //       <div>
+  //         팀원들과 같이 정보공유 채널방을 운영하며, 각 직무에 대한 정보를
+  //         공유하고있어요.
+  //       </div>,
+  //     ],
+  //   }
+  //   const troubleShooting = {
+  //     title: "Trouble Shooting",
+  //     list: [<div></div>],
+  //   }
   return (
     <div className="pt-12 text-start flex flex-col gap-8">
       {/* 내 직무 소개 */}

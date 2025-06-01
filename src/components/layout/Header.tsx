@@ -51,7 +51,7 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-4 text-sm">
-          <Link to={"/profile"}>
+          {/* <Link to={"/profile"}>
             <button>About</button>
           </Link>
           <button
@@ -63,7 +63,7 @@ const Header = () => {
             ) : (
               <MoonIcon className="size-4" />
             )}
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
