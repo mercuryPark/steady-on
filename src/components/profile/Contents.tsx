@@ -65,24 +65,12 @@ const ProfileContents = () => {
       </div>,
 
       <div>
-        <Bold>Trouble Shooting</Bold>후에는 기록 및 회고를 적극적으로
-        하고있어요.
+        <Bubble type="orange">Trouble Shooting</Bubble> 상황에서도 원인을
+        분석하고 해결 과정을 기록하며 개선하는 걸 좋아해요.
       </div>,
     ],
   }
-  //   const communication = {
-  //     title: "Communication",
-  //     list: [
-  //       <div>
-  //         팀원들과 같이 정보공유 채널방을 운영하며, 각 직무에 대한 정보를
-  //         공유하고있어요.
-  //       </div>,
-  //     ],
-  //   }
-  //   const troubleShooting = {
-  //     title: "Trouble Shooting",
-  //     list: [<div></div>],
-  //   }
+
   return (
     <div className="pt-12 text-start flex flex-col gap-8">
       {/* 내 직무 소개 */}

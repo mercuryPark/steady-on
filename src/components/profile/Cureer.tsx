@@ -245,8 +245,10 @@ const Career = () => {
                   <li>
                     <span className="font-semibold">API 요청 최적화</span>를
                     위해, 토큰 디코딩을 통해 사용자 정보의 유효성을 사전에
-                    검증하고, 유효하지 않은 경우 API 요청을 차단하여 불필요한
-                    트래픽을 감소시킴
+                    검증하고, 유효하지 않은 경우 API 요청을 차단하여{" "}
+                    <span className="font-semibold text-indigo-700">
+                      불필요한 트래픽을 감소
+                    </span>
                   </li>
                 </ul>
               </SubSection>
@@ -282,8 +284,10 @@ const Career = () => {
                     <span className="font-semibold">Command 패턴</span>과{" "}
                     <span className="font-semibold">Context API</span>를 활용한
                     Handler 아키텍처를 설계 및 구현하여, 웹소켓 기반의 실시간
-                    기능을 효율적으로 관리하고, 코드의 재사용성과 유지보수성을
-                    향상시킴
+                    기능을 효율적으로 관리하고,{" "}
+                    <span className="font-semibold text-indigo-700">
+                      코드의 재사용성과 유지보수성을 향상
+                    </span>
                   </li>
                 </ul>
               </SubSection>
@@ -297,8 +301,11 @@ const Career = () => {
                   <li>
                     사용자 페이지 비활성화 시에도 실시간 메시지 수신 및 처리가
                     가능하도록 <CodeBadge>Web Worker</CodeBadge>를 활용한 웹소켓
-                    처리 아키텍처를 설계, 이를 통해 메인 스레드의 부하를 줄이고,
-                    UI의 반응성을 유지하며, 사용자 경험을 향상시킴
+                    처리 아키텍처를 설계, 이를 통해{" "}
+                    <span className="font-semibold text-indigo-700">
+                      메인 스레드의 부하를 줄이고 UI의 반응성을 유지
+                    </span>
+                    하며, 사용자 경험을 향상시킴
                   </li>
                 </ul>
               </SubSection>
@@ -349,7 +356,10 @@ const Career = () => {
                 <li>
                   <CodeBadge>react-virtuoso</CodeBadge>를 사용하여 모든 페이지
                   리스트 컴포넌트에 가상 스크롤링을 구현하여, 대규모 데이터셋의
-                  렌더링 성능을 최적화하고 초기 로딩 시간과 메모리 사용량을 절감
+                  렌더링 성능을 최적화하고{" "}
+                  <span className="font-semibold text-indigo-700">
+                    초기 로딩 시간과 메모리 사용량을 절감
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -362,9 +372,11 @@ const Career = () => {
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
                   <span className="font-semibold">AWS S3 presigned URL</span>을
-                  활용하여 클라이언트가 직접 파일을 업로드하도록 구현함, 서버의
-                  부하를 감소시키고, 데이터 전송 효율성을 향상시킴, 또한, URL의
-                  만료 시간과 권한을 설정하여 보안강화
+                  활용하여 클라이언트가 직접 파일을 업로드하도록 구현함,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    서버의 부하를 감소시키고 데이터 전송 효율성을 향상
+                  </span>
+                  시킴, 또한, URL의 만료 시간과 권한을 설정하여 보안강화
                 </li>
               </ul>
             </SubSection>
@@ -401,8 +413,10 @@ const Career = () => {
                   메인 창에서 <CodeBadge>window.open()</CodeBadge>을 통해 메시지
                   에디터 등의 기능을 별도의 창으로 분리,{" "}
                   <CodeBadge>BroadcastChannel</CodeBadge>을 활용하여 메인 창과
-                  새 창 간의 실시간 데이터 동기화를 구현함으로써 중복 API 요청을
-                  최소화하고 성능을 최적화함
+                  새 창 간의 실시간 데이터 동기화를 구현함으로써{" "}
+                  <span className="font-semibold text-indigo-700">
+                    중복 API 요청을 최소화하고 성능을 최적화
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -426,7 +440,10 @@ const Career = () => {
                 <li>
                   IPC 통신을 활용하여 파일 다운로드 진행 상황을 실시간으로
                   표시하는 UI 컴포넌트 개발, 사용자는 다운로드 상태를 직관적으로
-                  확인할 수 있으며, 사용자 경험 향상에 기여
+                  확인할 수 있으며,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용자 경험을 향상
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -448,8 +465,10 @@ const Career = () => {
                 <li>
                   채팅방 및 채널 채팅방의 상단 고정 기능을 구현하고, 웹소켓 수신
                   및 사용자 인터랙션 등 다양한 시나리오를 고려하여 채팅방
-                  리스트의 정렬을 담당하는 공유 함수를 개발하여 실시간 데이터
-                  반영과 일관된 사용자 경험을 제공
+                  리스트의 정렬을 담당하는 공유 함수를 개발하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    실시간 데이터 반영과 일관된 사용자 경험을 제공
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -459,8 +478,10 @@ const Career = () => {
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
                   사용자가 자신과의 대화를 통해 메모를 남기거나 파일을 저장할 수
-                  있는 '나와의 채팅방' 기능을 설계 및 구현하여, 개인화된
-                  커뮤니케이션 환경을 제공
+                  있는 '나와의 채팅방' 기능을 설계 및 구현하여,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    개인화된 커뮤니케이션 환경을 제공
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -472,7 +493,7 @@ const Career = () => {
           <SectionTitle
             emoji="🎨"
             title="메신저 글꼴, 글자 크기, 색상 테마 등 전역적 스타일 적용"
-            period="2025.03 ~ 진행 중"
+            period="2025.03 ~ 2025.05"
           />
 
           <div className="space-y-8 pl-4">
@@ -483,8 +504,10 @@ const Career = () => {
                   Electron IPC를 활용하여 시스템 글꼴 목록을 가져오고, 사용자가
                   선택한 글꼴과 글자 크기를 로컬스토리지에 저장하여 전역{" "}
                   <CodeBadge>font-family</CodeBadge> 속성으로 적용. 시스템에
-                  해당 글꼴이 없는 예외 상황까지 고려한 처리 로직을 추가해,
-                  사용성의 안정성과 예외 대응력을 향상
+                  해당 글꼴이 없는 예외 상황까지 고려한 처리 로직을 추가해,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용성의 안정성과 예외 대응력을 향상
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -499,10 +522,131 @@ const Career = () => {
                   Tailwind CSS 4.0의 유틸리티 계층 분리 기능(
                   <CodeBadge>@layer</CodeBadge>)과 테마 확장 기능(
                   <CodeBadge>theme.extend</CodeBadge>) 그리고 CSS Custom
-                  Property를 결합하여 색상 테마의 유연한 전환 시스템을 구축.
-                  서버에서 전달받은 테마 정보를 기반으로 색상 변수를 실시간
+                  Property를 결합하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    색상 테마의 유연한 전환 시스템을 구축
+                  </span>
+                  . 서버에서 전달받은 테마 정보를 기반으로 색상 변수를 실시간
                   반영하며, hover, focus 등의 상호작용 스타일도 테마에 맞게 자동
                   적용되도록 구성
+                </li>
+              </ul>
+            </SubSection>
+          </div>
+        </div>
+
+        {/* 전달하기 기능 개발 */}
+        <div className="space-y-8">
+          <SectionTitle
+            emoji="📤"
+            title="메신저 전달하기 기능 개발"
+            period="2025.06 ~ 2025.08"
+          />
+
+          <div className="space-y-8 pl-4">
+            {/* 전달하기 아키텍처 */}
+            <SubSection
+              number="01"
+              title="Custom Hook 기반 비즈니스 로직 분리 및 최적화"
+            >
+              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
+                <li>
+                  <CodeBadge>useForward.ts</CodeBadge> Custom Hook을 개발하여
+                  전달하기 기능의 모든 비즈니스 로직을 중앙 집중식으로 관리,
+                  <span className="font-semibold text-indigo-700">
+                    코드 재사용성과 유지보수성을 향상
+                  </span>
+                </li>
+
+                <li>
+                  <span className="font-semibold">훅 기반 아키텍처</span>로
+                  비즈니스 로직을 분리하여 컴포넌트의 관심사를 명확히 하고,
+                  테스트 가능성과 코드 가독성을 향상시킴
+                </li>
+              </ul>
+            </SubSection>
+
+            {/* 새 창 연계 시스템 */}
+            <SubSection number="02" title="새 창 연계 시스템 및 리소스 최적화">
+              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
+                <li>
+                  이미지 미리보기와 에디터 새 창과의 연계 시스템을 구축,
+                  <CodeBadge>BroadcastChannel</CodeBadge>을 활용하여 메인 창과
+                  새 창 간의 실시간 데이터 동기화를 구현하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    중복 API 요청을 감소
+                  </span>
+                </li>
+
+                <li>
+                  웹앱과 브라우저 환경에서 각각 다른 동작(새창 vs 팝업)을
+                  제공하여 사용자 환경에 최적화된 경험을 구현
+                </li>
+              </ul>
+            </SubSection>
+
+            {/* 다중 전달 대상 관리 */}
+            <SubSection
+              number="03"
+              title="다중 전달 대상 선택 및 상태 관리 시스템"
+            >
+              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
+                <li>
+                  <span className="font-semibold">탭 기반 선택 관리</span>를
+                  통해 각 탭 이동 시 선택한 대상들을 초기화하고, 하나의 탭에서만
+                  대상 선택이 가능하도록 하여 사용자 경험의 일관성을 유지
+                </li>
+              </ul>
+            </SubSection>
+
+            {/* 전달 기능 통합 */}
+            <SubSection
+              number="04"
+              title="채팅, 보관함, 이미지 미리보기 통합 전달 시스템"
+            >
+              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
+                <li>
+                  <span className="font-semibold">다양한 컨텍스트 통합</span>을
+                  통해 채팅, 채널채팅, 보관함, 이미지 미리보기 등 모든 곳에서
+                  전달하기 기능을 일관되게 제공, 각 컨텍스트에 맞는 더보기
+                  메뉴에 전달 버튼을 추가하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용자 접근성을 향상
+                  </span>
+                </li>
+                <li>
+                  <span className="font-semibold">다중 선택 전달</span> 기능을
+                  보관함에 구현하여 사용자가 여러 파일/이미지/폴더/링크를 동시에
+                  선택하여 전달할 수 있도록 하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    작업 효율성을 증대
+                  </span>
+                </li>
+              </ul>
+            </SubSection>
+
+            {/* 사용자 피드백 시스템 */}
+            <SubSection
+              number="05"
+              title="Toast 알림 및 이동 기능을 통한 사용자 피드백"
+            >
+              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
+                <li>
+                  전달 완료 후 <span className="font-semibold">Toast 알림</span>
+                  을 통해 전달한 대상(방이름, 받는사람)을 명확히 표시하고,
+                  우측하단 이동하기 버튼을 통해 전달한 곳으로 즉시 이동할 수
+                  있는 기능을 제공하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용자 만족도를 향상
+                  </span>
+                </li>
+                <li>
+                  <span className="font-semibold">
+                    컨텍스트별 차별화된 처리
+                  </span>
+                  를 통해 채팅/채널채팅은 sendChat API를 사용하고, 메시지는
+                  조직도 사용자 선택 후 에디터에 컨텐츠를 자동 입력하는 방식으로
+                  각각의 특성에 맞는 최적화된 전달 경험 제공
                 </li>
               </ul>
             </SubSection>
@@ -514,7 +658,7 @@ const Career = () => {
           <SectionTitle
             emoji=""
             title="OfficeNEXT Admin"
-            period="2025.01 ~ 진행 중"
+            period="2025.03 ~ 2025.07"
             color="blue"
             type="title"
           />
@@ -539,7 +683,10 @@ const Career = () => {
                 </li>
                 <li>
                   다양한 필터링 옵션을 제공하여 사용자가 원하는 데이터를 쉽게
-                  찾을 수 있도록 UX 개선
+                  찾을 수 있도록{" "}
+                  <span className="font-semibold text-indigo-700">
+                    UX를 개선
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -551,13 +698,14 @@ const Career = () => {
             >
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
-                  <CodeBadge>react-slick</CodeBadge>을 활용하여 테마 미리보기
-                  캐러셀을 구현하고, 실시간으로 테마 색상을 변경할 수 있는
-                  스위치 기능 개발
+                  테마 미리보기 캐러셀을 구현하고, 실시간으로 테마 색상을 변경할
+                  수 있는 스위치 기능 개발
                 </li>
                 <li>
-                  사용자가 테마를 직관적으로 미리 볼 수 있도록 하여 사용자 경험
-                  향상
+                  사용자가 테마를 직관적으로 미리 볼 수 있도록 하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용자 경험을 향상
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -581,7 +729,10 @@ const Career = () => {
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
                   각 페이지별로 <CodeBadge>Custom Hooks</CodeBadge>를 도입하여
-                  비즈니스 로직을 분리하고, 코드의 재사용성과 가독성을 향상
+                  비즈니스 로직을 분리하고,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    코드의 재사용성과 가독성을 향상
+                  </span>
                 </li>
                 <li>
                   <CodeBadge>Jest</CodeBadge>를 사용하여 Custom Hooks에 대한
@@ -595,15 +746,16 @@ const Career = () => {
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
                   <CodeBadge>vite-plugin-svgr</CodeBadge>를 활용하여 SVG 파일을
-                  React 컴포넌트로 변환하고, <CodeBadge>?react</CodeBadge> 쿼리
-                  파라미터를 통해 JSX 형태로 효율적으로 관리
+                  React 컴포넌트로 변환해 JSX 형태로 효율적으로 관리
                 </li>
                 <li>
                   아이콘 컴포넌트를 개발하여 <CodeBadge>type</CodeBadge>과
                   스타일 관련 props를 받아 동적으로 SVG 아이콘을 렌더링하고,{" "}
                   <CodeBadge>stroke</CodeBadge>, <CodeBadge>fill</CodeBadge>{" "}
-                  등의 속성을 props로 제어하여 다양한 디자인을 단일 컴포넌트로
-                  관리
+                  등의 속성을 props로 제어하여{" "}
+                  <span className="font-semibold text-indigo-700">
+                    다양한 디자인을 단일 컴포넌트로 관리
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -643,7 +795,7 @@ const Career = () => {
                   <span className="font-semibold">일괄 작업 기능</span>을
                   도입하여 다수의 클라이언트 정보를 한 번에 수정/삭제할 수
                   있도록 구현함으로써, 운영팀의 작업 효율성을{" "}
-                  <span className="font-semibold text-emerald-700">
+                  <span className="font-semibold text-indigo-700">
                     50% 이상 향상
                   </span>
                 </li>
@@ -656,14 +808,10 @@ const Career = () => {
                 <li>
                   회사별 사용자의 실시간 접속 상태를 시각화하여 보여주는
                   대시보드를 개발, <CodeBadge>WebSocket</CodeBadge> 연결 상태,
-                  IP 주소, OS 정보 등을 직관적으로 모니터링할 수 있는 인터페이스
-                  구현
-                </li>
-                <li>
-                  실시간 데이터 업데이트를 위해{" "}
-                  <CodeBadge>Server-Sent Events</CodeBadge>를 활용하여 서버의
-                  상태 변경을 즉시 반영하도록 구현, 모니터링의 정확성과 신뢰성을
-                  확보
+                  IP 주소, OS 정보 등을{" "}
+                  <span className="font-semibold text-indigo-700">
+                    직관적으로 모니터링할 수 있는 인터페이스를 구현
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -676,14 +824,7 @@ const Career = () => {
               <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
                 <li>
                   회사 또는 개별 사용자 단위로 알림과 공지를 전송할 수 있는 관리
-                  시스템을 개발하여, 보다 정교한 타겟팅이 가능한 커뮤니케이션
-                  채널을 구축
-                </li>
-                <li>
-                  <span className="font-semibold">탭 기반의 직관적인 UI</span>를
-                  설계하여 알림과 공지를 구분하여 관리할 수 있도록 하였으며,
-                  미리보기 기능을 통해 전송 전 내용 확인이 가능하도록 사용자
-                  경험을 개선
+                  페이지를 개발
                 </li>
               </ul>
             </SubSection>
@@ -739,7 +880,10 @@ const Career = () => {
                 <li>
                   <span className="font-semibold">단계별 상태 지속성</span>을
                   위해 <CodeBadge>localStorage</CodeBadge>와 연동하여 페이지
-                  새로고침 시에도 진행 상태가 유지되도록 구현, 사용자 경험 개선
+                  새로고침 시에도 진행 상태가 유지되도록 구현,{" "}
+                  <span className="font-semibold text-indigo-700">
+                    사용자 경험을 개선
+                  </span>
                 </li>
               </ul>
             </SubSection>
@@ -751,30 +895,10 @@ const Career = () => {
                   <CodeBadge>Kakao Map API</CodeBadge>와{" "}
                   <CodeBadge>공공 지도 OpenAPI</CodeBadge>를 통합하여 사용자
                   맞춤형 지도 서비스를 구현, 위치 기반 검색과 현재 위치 조회
-                  기능을 통해 서비스 접근성 향상
-                </li>
-                <li>
-                  <span className="font-semibold">지도 API 추상화 레이어</span>
-                  를 구축하여 여러 지도 서비스를 유연하게 전환할 수 있도록 설계,
-                  향후 다른 지도 서비스 통합 시 코드 수정을 최소화할 수 있는
-                  확장성 확보
-                </li>
-              </ul>
-            </SubSection>
-
-            {/* 타지역 정보 탐색 */}
-            <SubSection number="03" title="타지역 정보 탐색 시스템">
-              <ul className="list-disc pl-4 space-y-3 text-gray-700 text-sm">
-                <li>
-                  사용자의 관심 지역 데이터를 <CodeBadge>IndexedDB</CodeBadge>에
-                  캐싱하여 반복적인 API 호출을 줄이고, 오프라인 상태에서도
-                  기본적인 정보 탐색이 가능하도록 구현
-                </li>
-                <li>
-                  <span className="font-semibold">동적 데이터 로딩</span> 전략을
-                  적용하여 스크롤 시 추가 데이터를 자연스럽게 로드하는 무한
-                  스크롤을 구현, 초기 로딩 시간을{" "}
-                  <span className="font-semibold text-blue-700">40% 단축</span>
+                  기능을 통해{" "}
+                  <span className="font-semibold text-indigo-700">
+                    서비스 접근성을 향상
+                  </span>
                 </li>
               </ul>
             </SubSection>

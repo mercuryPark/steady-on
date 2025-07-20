@@ -69,22 +69,23 @@ const ProfileHeader = () => {
             <div className="flex items-center gap-2 mb-1">
               <span
                 role="img"
-                aria-label="github"
+                aria-label="resume"
                 className="text-lg opacity-80"
               >
-                💻
+                📄
               </span>
               <span className="text-slate-700 text-[15px] font-semibold tracking-wide">
-                Github
+                Resume
               </span>
             </div>
             <a
-              href="https://github.com/mercuryPark"
-              className="block pl-8 text-slate-600 hover:text-slate-900 transition-colors text-[13px] font-normal"
+              href="/이력서_프론트엔드 박호연.pdf"
+              className="block pl-8 text-slate-600 hover:text-slate-900 transition-colors text-[13px] font-normal cursor-pointer"
+              download="이력서_프론트엔드 박호연.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://github.com/mercuryPark
+              이력서 다운로드
             </a>
           </div>
 

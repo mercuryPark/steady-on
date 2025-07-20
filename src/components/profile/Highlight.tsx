@@ -95,7 +95,9 @@ const IssueCard = ({
           </div>
           <div>
             <h4 className="font-medium text-slate-700 mb-1">개선 방법</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">{solution}</p>
+            <p className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
+              {solution}
+            </p>
           </div>
         </div>
       </div>
@@ -121,11 +123,6 @@ const Highlight = () => {
         팀원들과 같이 정보공유 채널방을 운영하며, 각 직무에 대한 정보를
         공유하고있어요.
       </div>,
-
-      // <div>
-      //   <Bubble type="indigo">팀원 및 사내 동료들과의 커뮤니케이션</Bubble>을
-      //   중요시해 사내 동호회 회장을 맡고있어요.
-      // </div>,
       <div>타 팀의 신입사원 멘토 추천으로 사내 멘토링을 진행하고 있어요.</div>,
     ],
   }
@@ -139,10 +136,21 @@ const Highlight = () => {
         cause={[
           "1. 사용자의 환경을 조사하고, github 포럼을 통해 2-in-1 PC 사용자에게 동일 이슈가 발견됨을 확인",
           "2. 사용자가 키보드를 탈착 또는 화면을 조정하는 특정상황에서 태블릿모드로 변경됨을 확인",
-          "3. 이슈 발생 시점과 업데이트 시점을 대조해 tailwindcss 4.0 업데이트 이후 tailwindcss가 2-in-1 PC의 태블릿모드상태일때 hover,active와 같은 사용자 동작 감지를 지원하지 않음을 파악",
-          "4. 정확한 파악을 위한 tailwindcss 버전별 사용자 동작 감지를 테스트 할 수 있는 페이지를 사용자에게 제공해 확인",
+          "3. 이슈 발생 시점과 업데이트 시점을 대조해 tailwindcss 4.0 업데이트 이후 문제발생 확인",
+          "4. tailwindcss가 2-in-1 PC의 태블릿모드상태일때 hover,active와 같은 사용자 동작 감지를 지원하지 않음을 파악",
+          "5. 정확한 파악을 위한 tailwindcss 버전별 사용자 동작 감지를 테스트 할 수 있는 페이지를 사용자에게 제공해 확인",
         ]}
         solution="사용자 동작 감지부분에 대한 CSS 속성을 커스텀해 이전버전과 동일하게 동작하도록 개선"
+      />,
+      <IssueCard
+        title="채팅방 이동시 RaceCondition 문제발생 해결"
+        problem="사용자들에게서 간헐적으로 이전채팅방의 정보가 현재 진입한 채팅방에 덮어씌워진다는 제보를 받음, 이후 간헐적으로 해당내용이 테스트환경에서 재현됨 "
+        cause={[
+          "1. 방 입장시 initRoom에서 채팅리스트, 참가자조회 등 방 데이터를 전부 조회하는 과정에서 비동기 API 요청이 동시에 실행됨",
+          "2. 연속적으로 채팅방을 이동할 때 이전 방의 initRoom 요청이 아직 진행중인 상태에서 새 방의 initRoom이 실행되어 Race Condition 발생",
+          "3. 참가자가 많은 방(300명)의 API 응답이 참가자가 적은 방(4명)보다 느려서 이전 방의 응답이 나중에 도착하여 현재 방 데이터를 덮어씌우는 현상 발생",
+        ]}
+        solution={`abortController(webAPI)를 활용해 이전요청이 진행중이면 요청을 취소하고 새로운 요청을 실행하는 방식으로 개선 \n 모든페이지의 연속되면서 빠른 요청이 있는 케이스를 조사해 전역적으로 이전 요청에 대한 cancel처리를 적용함`}
       />,
       <IssueCard
         title="채팅방 Pin 기능 멀티 에이전트 동기화 개선"
@@ -152,7 +160,7 @@ const Highlight = () => {
           "2. A 에이전트에는 없는 B 에이전트에서 최하단 채팅방 Pin 고정시 A 에이전트에서 동기화처리가 되지 않음을 확인",
           "3. A 에이전트에서 Pin 고정된 채팅방 해제시 올바른 위치가 아닌 현재 불러온 채팅방리스트 최하단으로 이동함을 확인",
         ]}
-        solution="WebSocket 데이터를 기반으로 사용자에게 없는 채팅방이 상단고정되었을때 특정 채팅방 정보 조회 API 처리 및 기존 채팅방 ordering하는 로직 개선, 사용자에게 없는 채팅방 고정해제시 해당 채팅방 리스트 제외"
+        solution={`WebSocket 데이터를 기반으로 사용자에게 없는 채팅방이 상단고정되었을때 특정 채팅방 정보 조회 API 처리 및 기존 채팅방 ordering하는 로직 개선 \n 사용자에게 없는 채팅방 고정해제시 해당 채팅방 리스트 제외처리`}
       />,
       <IssueCard
         title="OverlayPanel z-index 우선순위 이슈"
@@ -186,7 +194,7 @@ const Highlight = () => {
           {communication.title}
         </h1>
         <div className="mt-4">
-          <ul className="list-disc pl-4 text-sm space-y-2">
+          <ul className="list-disc pl-4 text-sm">
             {communication.list.map((item, index) => (
               <li key={`comm-${index}`}>{item}</li>
             ))}
