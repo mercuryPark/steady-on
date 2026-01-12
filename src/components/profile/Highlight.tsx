@@ -1,42 +1,5 @@
 import React from "react"
 
-const Bubble = ({
-  children,
-  type,
-}: {
-  children: React.ReactNode
-  type: "lime" | "orange" | "indigo" | "stone"
-}) => {
-  const getTextColor = (type: string) => {
-    switch (type) {
-      case "lime":
-        return "text-lime-700"
-      case "orange":
-        return "text-orange-700"
-      case "indigo":
-        return "text-indigo-700"
-      case "stone":
-        return "text-stone-700"
-      default:
-        return "text-slate-700"
-    }
-  }
-
-  return (
-    <span
-      className={`bg-gray-200 text-xs py-0.5 px-1 rounded font-semibold ${getTextColor(
-        type
-      )}`}
-    >
-      {children}
-    </span>
-  )
-}
-
-const Bold = ({ children }: { children: React.ReactNode }) => {
-  return <span className="font-semibold">{children}</span>
-}
-
 const IssueCard = ({
   title,
   problem,
@@ -46,58 +9,75 @@ const IssueCard = ({
   title: string
   problem: string
   cause: string | string[]
-  solution: string
+  solution: string | string[]
 }) => {
-  const renderCause = () => {
-    if (Array.isArray(cause)) {
-      return cause.map((line, index) => (
-        <React.Fragment key={index}>
-          {line}
-          {index < cause.length - 1 && <br />}
-        </React.Fragment>
-      ))
-    }
-    return cause
-  }
-
   return (
-    <div className="bg-white rounded-lg p-6 space-y-4 hover:bg-slate-50 transition-colors duration-300">
-      <h3 className="text-lg font-semibold text-slate-800 border-b border-slate-100 pb-2">
-        {title}
-      </h3>
-
-      <div className="space-y-4">
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
-            <span className="text-red-500 text-sm">🚨</span>
-          </div>
-          <div>
-            <h4 className="font-medium text-slate-700 mb-1">문제 상황</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">{problem}</p>
-          </div>
+    <div className="py-16 first:pt-0 border-b border-slate-100 last:border-0 text-start">
+      <div className="flex flex-col gap-10">
+        <div className="space-y-4">
+          <h3 className="text-2xl font-black text-slate-900 tracking-tighter leading-tight">
+            {title}
+          </h3>
         </div>
 
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-            <span className="text-blue-500 text-sm">🔍</span>
-          </div>
-          <div>
-            <h4 className="font-medium text-slate-700 mb-1">원인 파악</h4>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              {renderCause()}
-            </p>
-          </div>
-        </div>
+        <div className="grid gap-12 relative">
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-slate-100 hidden md:block" />
 
-        <div className="flex items-start gap-3">
-          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center">
-            <span className="text-green-500 text-sm">✨</span>
+          {/* Problem */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 relative">
+            <div className="hidden md:flex shrink-0 size-8 rounded-full bg-rose-500 text-white items-center justify-center text-[12px] font-black z-10 shadow-sm shadow-rose-200">
+              Q
+            </div>
+            <div className="flex-1">
+              <h4 className="text-[11px] font-black text-rose-500 uppercase tracking-[0.2em] mb-3">
+                Identified Problem
+              </h4>
+              <p className="text-[16px] text-slate-600 leading-relaxed font-semibold">
+                {problem}
+              </p>
+            </div>
           </div>
-          <div>
-            <h4 className="font-medium text-slate-700 mb-1">개선 방법</h4>
-            <p className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
-              {solution}
-            </p>
+
+          {/* Cause */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 relative">
+            <div className="hidden md:flex shrink-0 size-8 rounded-full bg-slate-800 text-white items-center justify-center text-[12px] font-black z-10 shadow-sm shadow-slate-200">
+              C
+            </div>
+            <div className="flex-1">
+              <h4 className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] mb-3">
+                Root Cause Analysis
+              </h4>
+              <div className="text-[15px] text-slate-500 leading-relaxed space-y-3 font-medium">
+                {Array.isArray(cause) ? (
+                  cause.map((line, idx) => (
+                    <p key={idx} className="pl-4 border-l-2 border-slate-100">
+                      {line}
+                    </p>
+                  ))
+                ) : (
+                  <p className="pl-4 border-l-2 border-slate-100">{cause}</p>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Solution */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 relative">
+            <div className="hidden md:flex shrink-0 size-8 rounded-full bg-emerald-500 text-white items-center justify-center text-[12px] font-black z-10 shadow-sm shadow-emerald-200">
+              A
+            </div>
+            <div className="flex-1 p-6 md:p-8 bg-emerald-50/40 rounded-3xl border border-emerald-100/50">
+              <h4 className="text-[11px] font-black text-emerald-600 uppercase tracking-[0.2em] mb-4">
+                Engineered Solution
+              </h4>
+              <div className="text-[15px] text-slate-800 leading-relaxed font-bold space-y-3">
+                {Array.isArray(solution) ? (
+                  solution.map((line, idx) => <p key={idx}>{line}</p>)
+                ) : (
+                  <p>{solution}</p>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -106,112 +86,102 @@ const IssueCard = ({
 }
 
 const Highlight = () => {
-  const communication = {
-    title: "커뮤니케이션",
-    list: [
-      <div>
-        QC 담당자와의 <Bold>적극적인 소통</Bold>을 통해 이슈 사각지대를 사전에
-        파악하고,
-        <Bubble type="indigo">리팩토링 및 구조 개선</Bubble>을 통해 양질의
-        결과물을 도출했어요.
-      </div>,
-      <div>
-        기획자와의 <Bubble type="indigo">원활한 소통</Bubble>을 통해 회의 외에도
-        기획의도와 개발환경을 공유하며, 효율적인 서비스 개발을 지향하고있어요.
-      </div>,
-      <div>
-        팀원들과 같이 정보공유 채널방을 운영하며, 각 직무에 대한 정보를
-        공유하고있어요.
-      </div>,
-      <div>타 팀의 신입사원 멘토 추천으로 사내 멘토링을 진행하고 있어요.</div>,
-    ],
-  }
-
-  const troubleshooting = {
-    title: "Trouble Shooting 경험",
-    list: [
-      <IssueCard
-        title="2-in-1 PC 사용자 동작 감지불가 개선"
-        problem="특정 사용자의 PC에서 Hover, Active 이벤트가 동작하지 않는 문제 발생"
-        cause={[
-          "1. 사용자의 환경을 조사하고, github 포럼을 통해 2-in-1 PC 사용자에게 동일 이슈가 발견됨을 확인",
-          "2. 사용자가 키보드를 탈착 또는 화면을 조정하는 특정상황에서 태블릿모드로 변경됨을 확인",
-          "3. 이슈 발생 시점과 업데이트 시점을 대조해 tailwindcss 4.0 업데이트 이후 문제발생 확인",
-          "4. tailwindcss가 2-in-1 PC의 태블릿모드상태일때 hover,active와 같은 사용자 동작 감지를 지원하지 않음을 파악",
-          "5. 정확한 파악을 위한 tailwindcss 버전별 사용자 동작 감지를 테스트 할 수 있는 페이지를 사용자에게 제공해 확인",
-        ]}
-        solution="사용자 동작 감지부분에 대한 CSS 속성을 커스텀해 이전버전과 동일하게 동작하도록 개선"
-      />,
-      <IssueCard
-        title="채팅방 이동시 RaceCondition 문제발생 해결"
-        problem="사용자들에게서 간헐적으로 이전채팅방의 정보가 현재 진입한 채팅방에 덮어씌워진다는 제보를 받음, 이후 간헐적으로 해당내용이 테스트환경에서 재현됨 "
-        cause={[
-          "1. 방 입장시 initRoom에서 채팅리스트, 참가자조회 등 방 데이터를 전부 조회하는 과정에서 비동기 API 요청이 동시에 실행됨",
-          "2. 연속적으로 채팅방을 이동할 때 이전 방의 initRoom 요청이 아직 진행중인 상태에서 새 방의 initRoom이 실행되어 Race Condition 발생",
-          "3. 참가자가 많은 방(300명)의 API 응답이 참가자가 적은 방(4명)보다 느려서 이전 방의 응답이 나중에 도착하여 현재 방 데이터를 덮어씌우는 현상 발생",
-        ]}
-        solution={`abortController(webAPI)를 활용해 이전요청이 진행중이면 요청을 취소하고 새로운 요청을 실행하는 방식으로 개선 \n 모든페이지의 연속되면서 빠른 요청이 있는 케이스를 조사해 전역적으로 이전 요청에 대한 cancel처리를 적용함`}
-      />,
-      <IssueCard
-        title="채팅방 Pin 기능 멀티 에이전트 동기화 개선"
-        problem="동일 계정의 여러 에이전트에서 채팅방 Pin 기능 사용 시 상태가 서로 다르게 표시되는 문제 발생"
-        cause={[
-          "1. 각기 다른 에이전트의 불러온 채팅방 갯수가 다른경우 이슈가 발견됨을 확인",
-          "2. A 에이전트에는 없는 B 에이전트에서 최하단 채팅방 Pin 고정시 A 에이전트에서 동기화처리가 되지 않음을 확인",
-          "3. A 에이전트에서 Pin 고정된 채팅방 해제시 올바른 위치가 아닌 현재 불러온 채팅방리스트 최하단으로 이동함을 확인",
-        ]}
-        solution={`WebSocket 데이터를 기반으로 사용자에게 없는 채팅방이 상단고정되었을때 특정 채팅방 정보 조회 API 처리 및 기존 채팅방 ordering하는 로직 개선 \n 사용자에게 없는 채팅방 고정해제시 해당 채팅방 리스트 제외처리`}
-      />,
-      <IssueCard
-        title="OverlayPanel z-index 우선순위 이슈"
-        problem="사용자에게 overlay로 버튼을 제공하는 overlayPanel이 다른 ui에 가려져 보이는 이슈 발생"
-        cause={[
-          "1. 해당 컴포넌트의 커밋이 없었음에도 이슈가 발생됨을 확인",
-          "2. 문제가 발생되는 커밋지점을 찾아 동일 ui 프레임워크 컴포넌트 속성이 변경됨을 확인",
-          "3. 같은 시점에 렌더링되는 ui 프레임워크의 유무에 따라 z-index를 자체적으로 계산해 우선순위 변경됨을 확인",
-        ]}
-        solution="overlayPanel에 대한 z-index 재정의 및 컴포넌트 렌더링 순서 조사"
-      />,
-      <IssueCard
-        title="WebSocket 초기 연결 데이터 동기화 이슈"
-        problem="웹페이지 새로고침 직후 전송받은 첫 번째 메시지가 리스트에 반영되지 않는 이슈 발생"
-        cause={[
-          "1. Websocket 연결 시점과 밀접한 로직 위주로 파악하며 이슈 확인",
-          "2. Websocket으로 받은 데이터를 반영할 상태관리 state가 비워져있음을 확인",
-          "3. Websocket을 처리하는 Handler의 상태관리 state를 참조하는 타이밍 문제 확인",
-        ]}
-        solution="setState의 함수형 업데이트를 활용해 Handler 생성시점에 상태관리 state 동기화 처리"
-      />,
-    ],
-  }
+  const troubleshooting = [
+    {
+      title:
+        "Chrome Background Throttling에 의한 메시지 수신 지연 및 중복 알림 장애 개선",
+      problem:
+        "PC 환경의 웹 앱 사용자가 시스템 절전 모드 해제 시, 백그라운드에서 누적된 메시지가 한꺼번에 처리되며 대량의 중복 알림이 발생하고 최신 메시지 수신이 지연되는 크리티컬 이슈 발생",
+      cause: [
+        "Windows / macOS의 강도 높은 전력 관리 정책으로 인해 Chrome Background Throttling이 활성화되어 `setInterval` 주기가 비정상적으로 지연됨",
+        "절전 모드 동안 WebSocket 큐에 적체된 과거 이벤트들이 복구 시점에 순차적으로 폭발하듯 처리되는 현상 확인",
+        "시나리오 기반 재현 테스트를 통해 네트워크 단절 및 시스템 슬립 상태에서의 `processQueue` 정지 현상 기술적 검증",
+      ],
+      solution: [
+        "각 페이지별 WebSocket Queue에 일정량 이상의 이벤트가 적체되고, 시스템이 절전 모드 상태로 판단될 경우 해당 Queue를 상황에 따라 초기화(Clear)하는 방어 로직 적용",
+        "Timestamp 비교를 통해 과거 이벤트를 필터링하여 중복 알림이 사용자에게 노출되지 않도록 처리",
+      ],
+    },
+    {
+      title:
+        "2-in-1 하이브리드 디바이스 환경에서의 인터랙션 감지 불가 현상 해결",
+      problem:
+        "Surface, Galaxy Book 등 2-in-1 PC 사용자가 태블릿 모드로 전환 시, 기존 마우스 기반의 Hover 및 Active 이벤트가 소멸되어 UI 반응성이 상실되는 현상",
+      cause: [
+        "Tailwind CSS v4 업데이트 후 특정 미디어 쿼리가 디바이스의 동적 상태 변화(키보드 탈착)를 실시간으로 추적하지 못함",
+        "포인터 장치의 유무에 따라 스타일 시스템이 고정되어 터치 환경에서의 인터랙션이 무시되는 아키텍처적 결함 파악",
+      ],
+      solution:
+        "사용자 인터랙션을 기기별로 제한하는 Tailwind CSS v4의 해당 기능을 버전 롤백하고, 동일 이슈가 발생하는 특정 사용자 기기 환경에서 직접 테스트를 수행하여 정상 동작 확인",
+    },
+    {
+      title:
+        "대규모 세션 전환 시 발생하는 비동기 경쟁 상태(Race Condition) 제어",
+      problem:
+        "참가자가 많은 대형 채팅방(300인 이상)과 소형 채팅방을 빠르게 전환할 때, 응답 속도 차이로 인해 이전 방의 정보가 현재 화면을 덮어쓰는 데이터 무결성 오류",
+      cause: [
+        "채팅방 초기화(initRoom) 시 실행되는 다수의 비동기 API 응답 순서가 네트워크 상태 및 데이터 크기에 따라 역전됨",
+        "기존 요청에 대한 명시적인 취소 로직 부재로 인해 불필요한 사이드 이펙트가 렌더링 스레드에 잔류함",
+      ],
+      solution:
+        "AbortController를 활용한 Request-Cancel 패턴을 도입하여, 신규 요청 시 이전 세션의 모든 유효하지 않은 요청을 즉시 폐기하도록 개선",
+    },
+    {
+      title: "멀티 에이전트 환경의 실시간 데이터 동기화 및 일관성 확보",
+      problem:
+        "데스크톱, 웹, 모바일 등 멀티 에이전트 동시 사용 시 채팅방 상단 고정(Pin) 상태가 에이전트별로 파편화되어 사용자 혼란 가중",
+      cause: [
+        "특정 에이전트에 로드되지 않은 채팅방 정보가 타 에이전트의 핀 설정 이벤트를 수신할 때 로컬 데이터 업데이트가 누락됨",
+        "정렬 알고리즘이 서버 데이터 수신 시점이 아닌 로컬 로딩 시점에 의존하여 정렬 순서 불일치 발생",
+      ],
+      solution:
+        "WebSocket 수신 시 데이터 부재 방에 대한 재귀적 페칭 로직을 추가하고, 모든 에이전트가 동일한 정렬 시드(Seed)를 공유하도록 공통 상태 관리 엔진 고도화",
+    },
+  ]
 
   return (
-    <div className="pt-12 text-start flex flex-col gap-20">
-      {/* Communication Experience */}
-      <div>
-        <h1 className="inline-block text-xl font-semibold bg-indigo-100 text-indigo-700 px-0.5">
-          <span className="mr-1">💬</span>
-          {communication.title}
-        </h1>
-        <div className="mt-4">
-          <ul className="list-disc pl-4 text-sm">
-            {communication.list.map((item, index) => (
-              <li key={`comm-${index}`}>{item}</li>
-            ))}
-          </ul>
-        </div>
+    <div className="flex flex-col gap-10 text-start">
+      <div className="flex flex-col gap-4 mb-8">
+        <div className="h-1.5 w-12 bg-indigo-600 rounded-full" />
+        <h2 className="text-3xl font-black text-slate-900 tracking-tighter italic">
+          Technical Problem Solving
+        </h2>
+        <p className="text-slate-500 text-[15px] font-medium leading-relaxed max-w-2xl">
+          단순한 기능 구현을 넘어, 복잡한 시스템 환경에서 발생하는 예측 불가능한
+          기술적 난제들을 집요하게 분석하고 공학적으로 해결한 사례들입니다.
+        </p>
       </div>
 
-      {/* Troubleshooting Experience */}
-      <div>
-        <h1 className="inline-block text-xl font-semibold bg-rose-100 text-rose-700 px-0.5">
-          <span className="mr-1">🔧</span>
-          {troubleshooting.title}
-        </h1>
-        <div className="mt-4 space-y-6">
-          {troubleshooting.list.map((item, index) => (
-            <div key={`trouble-${index}`}>{item}</div>
-          ))}
+      <div className="flex flex-col">
+        {troubleshooting.map((item, idx) => (
+          <IssueCard key={idx} {...item} />
+        ))}
+      </div>
+
+      <div className="mt-12 p-8 bg-slate-900 rounded-[2rem] flex flex-col items-center justify-center text-center gap-4 border border-slate-800 shadow-2xl">
+        <div className="size-12 rounded-2xl bg-slate-800 flex items-center justify-center">
+          <svg
+            className="w-6 h-6 text-indigo-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <div className="space-y-1">
+          <p className="text-[14px] font-black text-white tracking-tight">
+            더 깊은 고민의 흔적들은 기술 블로그에서 확인하실 수 있습니다.
+          </p>
+          <p className="text-[12px] text-slate-500 font-medium">
+            Project Post-mortems, Refactoring Logs, and Architectural Insights
+          </p>
         </div>
       </div>
     </div>
