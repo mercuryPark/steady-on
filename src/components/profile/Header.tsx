@@ -51,7 +51,7 @@ const ProfileHeader = () => {
                 icon: "📄",
                 label: "Resume",
                 value: "이력서 다운로드",
-                href: "/이력서_프론트엔드 박호연.pdf",
+                href: "/이력서_프론트엔드_박호연.pdf",
                 download: true,
               },
               {
