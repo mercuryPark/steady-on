@@ -74,7 +74,7 @@ const ProfileHeader = () => {
                   target={item.target}
                   rel={item.target ? "noopener noreferrer" : ""}
                   download={
-                    item.download ? "이력서_프론트엔드 박호연.pdf" : undefined
+                    item.download ? "이력서_프론트엔드_박호연.pdf" : undefined
                   }
                   className="text-[14px] font-semibold text-slate-700 hover:text-indigo-600 transition-colors"
                 >
