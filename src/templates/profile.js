@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import ProfileLayout from "../components/profile/Layout"
 
-const Profile = () => {
+const Profile = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <ProfileLayout />
     </Layout>
   )

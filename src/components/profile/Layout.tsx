@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import ProfileContents from "./Contents"
 import ProfileHeader from "./Header"
+import Career from "./Career"
 import Cureer from "./Cureer"
 import Highlight from "./Highlight"
 import Performance from "./Performance"
@@ -12,8 +13,8 @@ type TabType =
   | "performance"
 
 const TABS: { id: TabType; label: string; color: string }[] = [
-  { id: "main-project", label: "메인 프로젝트", color: "sky" },
-  { id: "side-project", label: "사이드 프로젝트", color: "indigo" },
+  { id: "main-project", label: "직무 경험", color: "sky" },
+  { id: "side-project", label: "서비스 경험", color: "indigo" },
   { id: "troubleshooting", label: "트러블슈팅", color: "rose" },
   { id: "performance", label: "성과 및 경험", color: "emerald" },
 ]
@@ -95,18 +96,19 @@ const ProfileLayout = ({ profileData }: any) => {
     <div className="max-w-4xl mx-auto px-4 py-12 text-start font-sans">
       {/* Hero Section - Compact & Clean */}
       <header className="mb-12 border-b border-slate-100 pb-10">
-        <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center gap-2 mb-4">
           <span className="px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[11px] font-bold tracking-tight">
             PORTFOLIO
           </span>
           <span className="text-slate-300">/</span>
           <span className="text-slate-500 text-[13px] font-medium">
-            4년차 프론트엔드 개발자 박호연
+            4년차 프론트엔드 개발자
           </span>
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-snug tracking-tight">
-          사용자의 경험을 집요하게 고민하며 <br />
-          <span className="text-indigo-600">실질적인 해결책</span>을 제시합니다.
+          사용자 경험을 깊이 고민하며  <br/>
+           <span className="text-indigo-600"> 실질적인 해결책</span>을 제시하는
+          박호연입니다.
         </h1>
       </header>
 
@@ -116,6 +118,12 @@ const ProfileLayout = ({ profileData }: any) => {
 
       <section className="mb-16">
         <ProfileContents />
+      </section>
+
+      <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent w-full mb-16" />
+
+      <section className="mb-16">
+        <Career />
       </section>
 
       {/* 탭 섹션 스크롤 앵커 */}
@@ -140,7 +148,7 @@ const ProfileLayout = ({ profileData }: any) => {
                   }`}
                 >
                   <span className="relative">
-                    {tab.label}
+                  {tab.label}
                     {/* 미방문 탭 - 우측 상단 레드닷 */}
                     {!isVisited && !isActive && (
                       <span className="absolute -top-1 -right-2 size-1.5 rounded-full bg-rose-500" />

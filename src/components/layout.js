@@ -29,11 +29,12 @@ const theme = extendTheme({
 const Layout = ({ location, title, children, posts, tags }) => {
   // const rootPath = `${__PATH_PREFIX__}/`
   // const isRootPath = location.pathname === rootPath
+  const isProfilePage = location?.pathname === "/profile" || location?.pathname === "/profile/"
 
   return (
     <ChakraProvider theme={theme}>
       <div>
-        <Header />
+        {!isProfilePage && <Header />}
         <Main posts={posts} tags={tags}>
           {children}
         </Main>

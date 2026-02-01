@@ -10,17 +10,28 @@ const ProjectHeader = ({
   title,
   period,
   techs = [],
+  logo,
 }: {
   title: string
   period: string
   techs?: string[]
+  logo?: string
 }) => (
   <div className="flex flex-col gap-3 mb-10 text-start">
-    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-      <h3 className="text-2xl font-black text-slate-900 tracking-tighter italic uppercase">
-        {title}
-      </h3>
-      <span className="text-[12px] font-bold text-slate-400 tracking-wider">
+    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
+      <div className="flex items-center gap-5">
+        {logo && (
+          <img
+            src={logo}
+            alt={`${title} logo`}
+            className="shrink-0 size-20 object-contain rounded-2xl hover:opacity-80 transition-opacity"
+          />
+        )}
+        <h3 className="text-2xl font-black text-slate-900 tracking-tighter italic uppercase">
+          {title}
+        </h3>
+      </div>
+      <span className="text-[12px] font-bold text-slate-400 tracking-wider sm:ml-auto">
         {period}
       </span>
     </div>
@@ -107,7 +118,7 @@ const SideProjectSection = ({
 const Cureer = ({ type }: { type: "main" | "side" }) => {
   return (
     <div className="flex flex-col gap-10 text-start">
-      <div className="space-y-32">
+      <div className="space-y-12">
         {type === "main" ? (
           <>
             {/* Project 1: OfficeNEXT Messenger */}
@@ -124,6 +135,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                   "IndexedDB",
                   "WebWorker",
                 ]}
+                logo="/images/logos/officenext.png"
               />
 
               <ProjectSection
@@ -187,6 +199,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                 title="OfficeNEXT Admin"
                 period="2024.12 - 2025.12"
                 techs={["React", "Next.js", "Nuxt.js", "Tailwind CSS"]}
+                logo="/images/logos/officenext.png"
               />
               <ProjectSection
                 title="Admin Development"
@@ -257,6 +270,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                 title="잠깐살래"
                 period="2025.11 - PRESENT"
                 techs={["React Native", "Expo", "Auth Flow", "CI/CD"]}
+                logo="/images/logos/jamkkan-sallae.png"
               />
               <SideProjectSection
                 title="Mobile Application Development"
@@ -301,6 +315,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                 title="메일트리"
                 period="2025.08 - 2025.10"
                 techs={["React", "WebView", "Troubleshooting"]}
+                logo="/images/logos/mailtree.png"
               />
               <SideProjectSection
                 title="Service Maintenance"
@@ -350,6 +365,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                 title="토박이 프로젝트"
                 period="2024.08 - 2024.11"
                 techs={["React", "Kakao Map API", "Public Map API"]}
+                logo="/images/logos/tobagi.png"
               />
               <SideProjectSection
                 title="Location Based Services"

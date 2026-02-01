@@ -68,7 +68,7 @@ const IssueCard = ({
             </div>
             <div className="flex-1 p-6 md:p-8 bg-emerald-50/40 rounded-3xl border border-emerald-100/50">
               <h4 className="text-[11px] font-black text-emerald-600 uppercase tracking-[0.2em] mb-4">
-                Engineered Solution
+                해결 방법
               </h4>
               <div className="text-[15px] text-slate-800 leading-relaxed font-bold space-y-3">
                 {Array.isArray(solution) ? (
@@ -147,8 +147,7 @@ const Highlight = () => {
           Technical Problem Solving
         </h2>
         <p className="text-slate-500 text-[15px] font-medium leading-relaxed max-w-2xl">
-          단순한 기능 구현을 넘어, 복잡한 시스템 환경에서 발생하는 예측 불가능한
-          기술적 난제들을 집요하게 분석하고 공학적으로 해결한 사례들입니다.
+          복잡한 시스템 환경에서 발생하는 예측 불가능한 기술적 이슈를 분석하고 해결한 사례들입니다.
         </p>
       </div>
 

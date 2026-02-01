@@ -100,16 +100,11 @@ const ProfileContents = () => {
         누가 읽어도 <Bold>이해하기 쉬운 코드</Bold> 작성을 지향해요.
       </div>,
       <div>
-        코드리뷰와 <Bubble type="orange">적극적인 피드백 문화</Bubble>를
-        좋아해요.
-      </div>,
-      <div>
         서비스의 <Bold>사용자경험(UX)</Bold>을 중요시해 습관적으로 비교하고
         테스트해요.
       </div>,
       <div>
-        <Bold>확장성이 좋고 직관적인 오픈소스 라이브러리</Bold>를 조사하고
-        적용해보는 것을 좋아해요.
+       업무에 AI를 활용해 적용해보고, 개발 시간과 코드품질을 개선하는 것을 좋아해요.
       </div>,
     ],
   }
@@ -137,7 +132,7 @@ const ProfileContents = () => {
 
   return (
     <div className="flex flex-col py-4">
-      <IntroSection
+      {/* <IntroSection
         title={strength.title}
         emoji={strength.emoji}
         list={strength.list}
@@ -148,7 +143,7 @@ const ProfileContents = () => {
         emoji={myJob.emoji}
         list={myJob.list}
         color="emerald"
-      />
+      /> */}
       <IntroSection
         title={character.title}
         emoji={character.emoji}

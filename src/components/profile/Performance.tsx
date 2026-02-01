@@ -26,7 +26,7 @@ const PerformanceCard = ({
         <div className="flex-1 space-y-5">
           <div className="space-y-1">
             <h3 className="text-[11px] font-black text-indigo-500 uppercase tracking-[0.25em]">
-              Tech Excellence
+              기술적 성과
             </h3>
             <h4 className="text-2xl font-black text-slate-900 tracking-tighter italic uppercase">
               {title}
@@ -140,10 +140,10 @@ const Performance = () => {
       <div className="flex flex-col gap-4 mb-8">
         <div className="h-1.5 w-12 bg-indigo-600 rounded-full" />
         <h2 className="text-3xl font-black text-slate-900 tracking-tighter italic">
-          Technical Excellence
+          기술적 성과
         </h2>
         <p className="text-slate-500 text-[15px] font-medium leading-relaxed max-w-2xl">
-          수치로 증명되는 성능 개선과 확장 가능한 아키텍처 설계를 통해, 단순한 기능 구현 이상의 공학적 가치를 비즈니스에 제공합니다.
+          성능 최적화와 확장 가능한 설계를 통해 서비스 품질을 개선합니다.
         </p>
       </div>
 
