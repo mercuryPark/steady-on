@@ -144,6 +144,16 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                 emoji="💬"
                 items={[
                   {
+                    period: "2026.04",
+                    content:
+                      "커스텀 조직도 기능 및 파일 미리보기(Markdown, HTML, JSON) 기능 개발",
+                  },
+                  {
+                    period: "2026.02 - 2026.03",
+                    content:
+                      "Claude Code 기반 개발 환경 세팅 및 코드 리팩토링, 4단계 테스트 플로우 구축",
+                  },
+                  {
                     period: "2026.01",
                     content:
                       "웹 앱 전용 인증 서버 및 기능 검증을 위한 데모 모드 구축",
@@ -186,7 +196,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                   {
                     period: "2023.03 - 2024.03",
                     content:
-                      "기존 메신저 인증 시스템 및 개발 환경의 Next.js 프레임워크 전환 마이그레이션을 Claude Code 바이브코딩 워크플로우로 주도",
+                      "기존 인증 시스템과 개발 환경을 Next.js로 전환. Claude Code를 활용해 마이그레이션을 주도",
                   },
                 ]}
               />
@@ -199,7 +209,13 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
               <ProjectHeader
                 title="OfficeNEXT Admin"
                 period="2025.02 - PRESENT"
-                techs={["React", "Next.js", "Nuxt.js", "Tailwind CSS", "Claude Code"]}
+                techs={[
+                  "React",
+                  "Next.js",
+                  "Nuxt.js",
+                  "Tailwind CSS",
+                  "Claude Code",
+                ]}
                 logo="/images/logos/officenext.png"
               />
               <ProjectSection
@@ -209,17 +225,17 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                   {
                     period: "2025.11 - 2025.12",
                     content:
-                      "넥스트 링크 바로가기 관리, 카테고리 설정 및 제공 서비스 통합 관리 페이지 개발",
+                      "링크 바로가기, 카테고리 설정, 서비스 통합 관리 페이지 개발",
                   },
                   {
                     period: "2025.05 - 2025.07",
                     content:
-                      "IP 접속 제한 정책 관리 페이지 및 서비스 전역 시스템 테마 설정 페이지 구현",
+                      "IP 접속 제한 정책 관리와 시스템 테마 설정 페이지 구현",
                   },
                   {
                     period: "2025.02 - 2025.03",
                     content:
-                      "Claude Code 워크플로우를 적용해 어드민 개발 환경의 Next.js 전환(Nuxt.js 기반 레거시 탈피) 및 주요 정책/로그/현황 페이지 마이그레이션",
+                      "Nuxt.js → Next.js 전환 및 주요 페이지 마이그레이션. Claude Code로 전환 작업 가속",
                   },
                 ]}
               />
@@ -231,13 +247,18 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
             <section className="py-4">
               <ProjectHeader
                 title="Internal Ops Platform"
-                period="2022.12 - 2023.05"
-                techs={["React", "WebSocket", "Monitoring API"]}
+                period="2022.12 - PRESENT"
+                techs={["React", "WebSocket", "Monitoring API", "Claude Code"]}
               />
               <ProjectSection
                 title="Operation Tool Development"
                 emoji="🛡️"
                 items={[
+                  {
+                    period: "2026.02 - 2026.03",
+                    content:
+                      "Claude Code 기반 개발 환경 세팅 및 코드 리팩토링, 4단계 테스트 플로우 구축",
+                  },
                   {
                     period: "2023.04 - 2023.05",
                     content:
@@ -363,7 +384,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
             {/* Tobagi */}
             <section>
               <ProjectHeader
-                title="토박이 프로젝트"
+                title="토박이 — 동네 정보 공유 플랫폼"
                 period="2024.08 - 2024.11"
                 techs={["React", "Kakao Map API", "Public Map API"]}
                 logo="/images/logos/tobagi.png"

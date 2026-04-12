@@ -56,11 +56,11 @@ const Performance = () => {
         <ul className="space-y-3">
           <li className="flex gap-3">
             <span className="text-indigo-400 font-bold">01.</span>
-            <span>CLAUDE.md 기반 프로젝트 컨텍스트 관리와 커스텀 커맨드(git-commit, test-legacy, test-new-feature)로 <strong>개발 프로세스를 자동화</strong>하고, MCP 서버 연동으로 마이그레이션 시 deprecated API 없이 전환 → <span className="text-emerald-600 font-black">기존 일정 대비 75% 단축</span></span>
+            <span>CLAUDE.md로 프로젝트 규칙을 정의하고, 커스텀 커맨드로 커밋·테스트를 자동화. MCP 서버를 연동해 마이그레이션 시 최신 API만 사용하도록 세팅. <span className="text-emerald-600 font-black">기존 일정 대비 75% 단축.</span></span>
           </li>
           <li className="flex gap-3">
             <span className="text-indigo-400 font-bold">02.</span>
-            <span>프로젝트별 wiki, docs, coverage 등 <strong>진행 상황 자동 문서화 프로세스</strong>를 구축하고, AI가 생성한 계획·실행 기록을 리뷰하는 에이전트 코딩 최적화 리뷰 방식을 도입해 운영 중</span>
+            <span>프로젝트별 wiki와 커버리지 리포트를 자동 생성하도록 구성. 코드 한 줄 단위가 아닌, <strong>AI가 만든 계획과 실행 기록을 리뷰하는 방식</strong>으로 전환해 운영 중.</span>
           </li>
         </ul>
       ),

@@ -81,8 +81,7 @@ const Career = () => {
         "메신저 서비스 E2E 개발 및 운영 (초기 환경 구성부터 기능 개발, 트러블슈팅, 고객 이슈 대응까지 전반적인 운영)",
         "Next.js 기반 어드민 및 개발운영 플랫폼 구축 (Nuxt.js 레거시 환경에서 마이그레이션)",
         "Electron을 활용한 데스크톱 웹 앱 클라이언트 개발 및 멀티 윈도우 환경 데이터 동기화 구현",
-        "Claude Code 바이브코딩 워크플로우 설계 및 신규 기능·마이그레이션 3개 프로젝트에 전면 적용 (일정 75% 단축)",
-        "Biome → Vitest → Playwright 4단계 테스트 자동화 파이프라인 구축 및 CI 연동",
+        "Claude Code 활용 개발 워크플로우와 테스트 자동화 환경 구축",
       ],
     },
     {
@@ -90,7 +89,7 @@ const Career = () => {
       period: "2021.11 - 2022.05",
       logo: "/images/logos/outdoor-school.png",
       accentColor: "#09d0b9",
-      description: "아웃도어 상품 이커머스 회사로, 자사 쇼핑몰의 초기 구성부터 개발 및 운영을 담당했습니다.",
+      description: "아웃도어 상품 이커머스 회사로, 자사 쇼핑몰 프론트엔드 운영과 모바일/PC 반응형 대응, SEO 작업을 담당했습니다.",
       tasks: [
         "자사 쇼핑몰 웹사이트 초기 환경 구성부터 개발 및 운영",
         "Google Search Console과 Google Ads를 활용한 SEO/SEA 최적화 작업 수행",
