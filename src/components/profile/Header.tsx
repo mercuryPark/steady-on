@@ -3,17 +3,19 @@ import React from "react"
 const SKILLS = [
   "Next.js",
   "React",
-  "Vite",
+  "TypeScript",
   "Tailwind CSS",
   "React Native",
   "Expo",
-  "Web Socket",
   "Electron",
-  "TypeScript",
-  "Gatsby.js",
+  "Vite",
+  "Web Socket",
   "React Query",
   "Jotai",
-  "shadcn ui",
+  "Claude Code",
+  "Biome",
+  "Vitest",
+  "Playwright",
 ]
 
 const ProfileHeader = () => {

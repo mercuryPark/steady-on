@@ -47,7 +47,24 @@ const PerformanceCard = ({
 }
 
 const Performance = () => {
-  const performanceData = [
+  const performanceData: { title: string; metric: string; description: string; detail: React.ReactNode }[] = [
+    {
+      title: "AI-Driven Development",
+      metric: "75%↓",
+      description: "Claude Code 바이브코딩 워크플로우로 개발 일정 75% 단축",
+      detail: (
+        <ul className="space-y-3">
+          <li className="flex gap-3">
+            <span className="text-indigo-400 font-bold">01.</span>
+            <span>CLAUDE.md 기반 프로젝트 컨텍스트 관리와 커스텀 커맨드(git-commit, test-legacy, test-new-feature)로 <strong>개발 프로세스를 자동화</strong>하고, MCP 서버 연동으로 마이그레이션 시 deprecated API 없이 전환 → <span className="text-emerald-600 font-black">기존 일정 대비 75% 단축</span></span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-indigo-400 font-bold">02.</span>
+            <span>프로젝트별 wiki, docs, coverage 등 <strong>진행 상황 자동 문서화 프로세스</strong>를 구축하고, AI가 생성한 계획·실행 기록을 리뷰하는 에이전트 코딩 최적화 리뷰 방식을 도입해 운영 중</span>
+          </li>
+        </ul>
+      ),
+    },
     {
       title: "Data Structure Optimization",
       metric: "O(1)",
@@ -128,7 +145,7 @@ const Performance = () => {
           </li>
           <li className="flex gap-3">
             <span className="text-indigo-400 font-bold">02.</span>
-            <span>정적 리소스 관리 구조 개선 및 <strong>Binary Utility 분리</strong>를 통해 초기 렌더링 속도(LCP) 및 상호작용성 향상</span>
+            <span>정적 리소스 관리 구조 개선 및 <strong>Binary Utility 분리</strong>를 통해 초기 렌더링 속도(LCP) 및 상호작용성 향상 → <span className="text-emerald-600 font-black">LCP 약 45% 개선 (6초 → 3초대)</span></span>
           </li>
         </ul>
       ),

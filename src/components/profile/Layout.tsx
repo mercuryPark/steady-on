@@ -102,7 +102,7 @@ const ProfileLayout = ({ profileData }: any) => {
           </span>
           <span className="text-slate-300">/</span>
           <span className="text-slate-500 text-[13px] font-medium">
-            4년차 프론트엔드 개발자
+            3.5년차 프론트엔드 개발자
           </span>
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-snug tracking-tight">

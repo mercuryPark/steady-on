@@ -134,6 +134,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                   "Tailwind CSS v4",
                   "IndexedDB",
                   "WebWorker",
+                  "Claude Code",
                 ]}
                 logo="/images/logos/officenext.png"
               />
@@ -185,7 +186,7 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                   {
                     period: "2023.03 - 2024.03",
                     content:
-                      "기존 메신저 인증 시스템 및 개발 환경의 Next.js 프레임워크 전환 마이그레이션 주도",
+                      "기존 메신저 인증 시스템 및 개발 환경의 Next.js 프레임워크 전환 마이그레이션을 Claude Code 바이브코딩 워크플로우로 주도",
                   },
                 ]}
               />
@@ -197,8 +198,8 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
             <section className="py-4">
               <ProjectHeader
                 title="OfficeNEXT Admin"
-                period="2024.12 - 2025.12"
-                techs={["React", "Next.js", "Nuxt.js", "Tailwind CSS"]}
+                period="2025.02 - PRESENT"
+                techs={["React", "Next.js", "Nuxt.js", "Tailwind CSS", "Claude Code"]}
                 logo="/images/logos/officenext.png"
               />
               <ProjectSection
@@ -216,9 +217,9 @@ const Cureer = ({ type }: { type: "main" | "side" }) => {
                       "IP 접속 제한 정책 관리 페이지 및 서비스 전역 시스템 테마 설정 페이지 구현",
                   },
                   {
-                    period: "2024.12 - 2025.03",
+                    period: "2025.02 - 2025.03",
                     content:
-                      "어드민 개발 환경의 Next.js 전환(Nuxt.js 기반 레거시 탈피) 및 주요 정책/로그/현황 페이지 마이그레이션",
+                      "Claude Code 워크플로우를 적용해 어드민 개발 환경의 Next.js 전환(Nuxt.js 기반 레거시 탈피) 및 주요 정책/로그/현황 페이지 마이그레이션",
                   },
                 ]}
               />

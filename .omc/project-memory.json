@@ -1,0 +1,361 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775910329283,
+  "projectRoot": "/Users/hoyeon/Documents/workspace/steady-on",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "18.1.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18.1.0",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": "npm test",
+    "lintCommand": null,
+    "devCommand": "npm run start",
+    "scripts": {
+      "build": "gatsby build",
+      "develop": "gatsby develop",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+      "start": "gatsby develop",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src",
+      "static"
+    ],
+    "gitBranches": {
+      "defaultBranch": "master",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775910329259,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 6,
+      "lastAccessed": 1775910329260,
+      "keyFiles": [
+        "favicon-32x32.png",
+        "favicon.ico",
+        "manifest.webmanifest",
+        "resume.pdf",
+        "robots.txt"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 2,
+      "lastAccessed": 1775910329268,
+      "keyFiles": [
+        "normalize.css",
+        "style.css"
+      ]
+    },
+    "static": {
+      "path": "static",
+      "purpose": "Static files",
+      "fileCount": 3,
+      "lastAccessed": 1775910329269,
+      "keyFiles": [
+        "favicon.ico",
+        "robots.txt",
+        "이력서_프론트엔드_박호연.pdf"
+      ]
+    },
+    "public/static": {
+      "path": "public/static",
+      "purpose": "Static files",
+      "fileCount": 0,
+      "lastAccessed": 1775910329271,
+      "keyFiles": []
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 3,
+      "lastAccessed": 1775910329273,
+      "keyFiles": [
+        "bio.js",
+        "layout.js",
+        "seo.js"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 1,
+      "lastAccessed": 1775910329274,
+      "keyFiles": [
+        "404.js"
+      ]
+    },
+    "src/utils": {
+      "path": "src/utils",
+      "purpose": "Utility functions",
+      "fileCount": 2,
+      "lastAccessed": 1775910329277,
+      "keyFiles": [
+        "constants.ts",
+        "page.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "docs/FRONTEND-RESUME.md",
+      "accessCount": 8,
+      "lastAccessed": 1775912708535,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Layout.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1775913658003,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Cureer.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1775913278387,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 4,
+      "lastAccessed": 1775911017178,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Career.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775913248540,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Performance.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1775913316004,
+      "type": "file"
+    },
+    {
+      "path": "gatsby-config.js",
+      "accessCount": 3,
+      "lastAccessed": 1775910899711,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Header.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775913219036,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Contents.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1775913232692,
+      "type": "file"
+    },
+    {
+      "path": "tailwind.config.js",
+      "accessCount": 2,
+      "lastAccessed": 1775910622436,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 2,
+      "lastAccessed": 1775910626524,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775910636483,
+      "type": "file"
+    },
+    {
+      "path": "src/components/posts/list/Card.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775910637559,
+      "type": "file"
+    },
+    {
+      "path": "src/utils/constants.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775910639852,
+      "type": "file"
+    },
+    {
+      "path": "src/styles/global.css",
+      "accessCount": 2,
+      "lastAccessed": 1775910640688,
+      "type": "file"
+    },
+    {
+      "path": "src/templates/blog-post.js",
+      "accessCount": 2,
+      "lastAccessed": 1775910642523,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/Main.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775910647867,
+      "type": "file"
+    },
+    {
+      "path": "docs/CAREER.md",
+      "accessCount": 2,
+      "lastAccessed": 1775910650558,
+      "type": "file"
+    },
+    {
+      "path": "src/components/showcase/Layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775910653166,
+      "type": "file"
+    },
+    {
+      "path": "src/style.css",
+      "accessCount": 2,
+      "lastAccessed": 1775910898910,
+      "type": "file"
+    },
+    {
+      "path": "src/components/profile/Highlight.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1775913184802,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1775910620537,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1775910621114,
+      "type": "file"
+    },
+    {
+      "path": "gatsby-node.js",
+      "accessCount": 1,
+      "lastAccessed": 1775910624319,
+      "type": "file"
+    },
+    {
+      "path": "gatsby-browser.js",
+      "accessCount": 1,
+      "lastAccessed": 1775910624469,
+      "type": "file"
+    },
+    {
+      "path": "src/utils/page.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775910640190,
+      "type": "file"
+    },
+    {
+      "path": "src/templates/blog-home.js",
+      "accessCount": 1,
+      "lastAccessed": 1775910640542,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout.js",
+      "accessCount": 1,
+      "lastAccessed": 1775910644399,
+      "type": "file"
+    },
+    {
+      "path": "postcss.config.js",
+      "accessCount": 1,
+      "lastAccessed": 1775910650848,
+      "type": "file"
+    },
+    {
+      "path": "src/components/posts/list/Layout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775910653351,
+      "type": "file"
+    },
+    {
+      "path": ".prettierrc",
+      "accessCount": 1,
+      "lastAccessed": 1775910899329,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/git-commit.md",
+      "accessCount": 1,
+      "lastAccessed": 1775910981928,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/openspec.md",
+      "accessCount": 1,
+      "lastAccessed": 1775910984270,
+      "type": "file"
+    },
+    {
+      "path": "src/templates/profile.js",
+      "accessCount": 1,
+      "lastAccessed": 1775912826157,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

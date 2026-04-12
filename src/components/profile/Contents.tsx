@@ -104,7 +104,10 @@ const ProfileContents = () => {
         테스트해요.
       </div>,
       <div>
-       업무에 AI를 활용해 적용해보고, 개발 시간과 코드품질을 개선하는 것을 좋아해요.
+        <Bold>Claude Code 기반 바이브코딩 워크플로우</Bold>를 직접 설계하고, CLAUDE.md 컨텍스트 관리와 커스텀 커맨드로 개발 프로세스를 자동화해요.
+      </div>,
+      <div>
+        <Bubble type="lime">Biome → Vitest → Playwright</Bubble> 4단계 테스트 파이프라인을 구성해 CI에 연동하고, AI 에이전트 코딩에 최적화된 리뷰 프로세스를 운영해요.
       </div>,
     ],
   }
