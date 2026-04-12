@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775910329283,
+  "lastScanned": 1776005612880,
   "projectRoot": "/Users/hoyeon/Documents/workspace/steady-on",
   "techStack": {
     "languages": [
@@ -61,6 +61,7 @@
     "isMonorepo": false,
     "workspaces": [],
     "mainDirectories": [
+      "docs",
       "public",
       "src",
       "static"
@@ -76,27 +77,36 @@
       "path": "content",
       "purpose": null,
       "fileCount": 0,
-      "lastAccessed": 1775910329259,
+      "lastAccessed": 1776005612862,
       "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 1,
+      "lastAccessed": 1776005612863,
+      "keyFiles": [
+        "FRONTEND-RESUME.md"
+      ]
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 6,
-      "lastAccessed": 1775910329260,
+      "fileCount": 51,
+      "lastAccessed": 1776005612870,
       "keyFiles": [
-        "favicon-32x32.png",
-        "favicon.ico",
-        "manifest.webmanifest",
-        "resume.pdf",
-        "robots.txt"
+        "108-bf6e79ff162c2fcdd5ba.js",
+        "108-bf6e79ff162c2fcdd5ba.js.LICENSE.txt",
+        "108-bf6e79ff162c2fcdd5ba.js.map",
+        "404.html",
+        "452-fe75154ec52bacf5caab.js"
       ]
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 2,
-      "lastAccessed": 1775910329268,
+      "lastAccessed": 1776005612872,
       "keyFiles": [
         "normalize.css",
         "style.css"
@@ -106,25 +116,18 @@
       "path": "static",
       "purpose": "Static files",
       "fileCount": 3,
-      "lastAccessed": 1775910329269,
+      "lastAccessed": 1776005612873,
       "keyFiles": [
         "favicon.ico",
         "robots.txt",
         "이력서_프론트엔드_박호연.pdf"
       ]
     },
-    "public/static": {
-      "path": "public/static",
-      "purpose": "Static files",
-      "fileCount": 0,
-      "lastAccessed": 1775910329271,
-      "keyFiles": []
-    },
     "src/components": {
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 3,
-      "lastAccessed": 1775910329273,
+      "lastAccessed": 1776005612875,
       "keyFiles": [
         "bio.js",
         "layout.js",
@@ -135,7 +138,7 @@
       "path": "src/pages",
       "purpose": "Page components",
       "fileCount": 1,
-      "lastAccessed": 1775910329274,
+      "lastAccessed": 1776005612875,
       "keyFiles": [
         "404.js"
       ]
@@ -144,7 +147,7 @@
       "path": "src/utils",
       "purpose": "Utility functions",
       "fileCount": 2,
-      "lastAccessed": 1775910329277,
+      "lastAccessed": 1776005612876,
       "keyFiles": [
         "constants.ts",
         "page.ts"
@@ -153,207 +156,57 @@
   },
   "hotPaths": [
     {
-      "path": "docs/FRONTEND-RESUME.md",
-      "accessCount": 8,
-      "lastAccessed": 1775912708535,
-      "type": "file"
-    },
-    {
-      "path": "src/components/profile/Layout.tsx",
-      "accessCount": 7,
-      "lastAccessed": 1775913658003,
-      "type": "file"
-    },
-    {
       "path": "src/components/profile/Cureer.tsx",
-      "accessCount": 6,
-      "lastAccessed": 1775913278387,
+      "accessCount": 5,
+      "lastAccessed": 1776006317783,
       "type": "file"
     },
     {
-      "path": "CLAUDE.md",
+      "path": "docs/FRONTEND-RESUME.md",
       "accessCount": 4,
-      "lastAccessed": 1775911017178,
+      "lastAccessed": 1776006339596,
       "type": "file"
     },
     {
       "path": "src/components/profile/Career.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775913248540,
+      "accessCount": 2,
+      "lastAccessed": 1776006283598,
       "type": "file"
     },
     {
-      "path": "src/components/profile/Performance.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1775913316004,
-      "type": "file"
-    },
-    {
-      "path": "gatsby-config.js",
-      "accessCount": 3,
-      "lastAccessed": 1775910899711,
+      "path": "src/components/profile/Layout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776005678591,
       "type": "file"
     },
     {
       "path": "src/components/profile/Header.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775913219036,
+      "accessCount": 1,
+      "lastAccessed": 1776005679161,
       "type": "file"
     },
     {
       "path": "src/components/profile/Contents.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775913232692,
+      "accessCount": 1,
+      "lastAccessed": 1776005680625,
       "type": "file"
     },
     {
-      "path": "tailwind.config.js",
-      "accessCount": 2,
-      "lastAccessed": 1775910622436,
-      "type": "file"
-    },
-    {
-      "path": "package.json",
-      "accessCount": 2,
-      "lastAccessed": 1775910626524,
-      "type": "file"
-    },
-    {
-      "path": "src/components/layout/Header.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775910636483,
-      "type": "file"
-    },
-    {
-      "path": "src/components/posts/list/Card.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775910637559,
-      "type": "file"
-    },
-    {
-      "path": "src/utils/constants.ts",
-      "accessCount": 2,
-      "lastAccessed": 1775910639852,
-      "type": "file"
-    },
-    {
-      "path": "src/styles/global.css",
-      "accessCount": 2,
-      "lastAccessed": 1775910640688,
-      "type": "file"
-    },
-    {
-      "path": "src/templates/blog-post.js",
-      "accessCount": 2,
-      "lastAccessed": 1775910642523,
-      "type": "file"
-    },
-    {
-      "path": "src/components/layout/Main.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775910647867,
-      "type": "file"
-    },
-    {
-      "path": "docs/CAREER.md",
-      "accessCount": 2,
-      "lastAccessed": 1775910650558,
-      "type": "file"
-    },
-    {
-      "path": "src/components/showcase/Layout.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775910653166,
-      "type": "file"
-    },
-    {
-      "path": "src/style.css",
-      "accessCount": 2,
-      "lastAccessed": 1775910898910,
+      "path": "src/components/profile/Performance.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776005680916,
       "type": "file"
     },
     {
       "path": "src/components/profile/Highlight.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1775913184802,
-      "type": "file"
-    },
-    {
-      "path": "tsconfig.json",
       "accessCount": 1,
-      "lastAccessed": 1775910620537,
-      "type": "file"
-    },
-    {
-      "path": "README.md",
-      "accessCount": 1,
-      "lastAccessed": 1775910621114,
-      "type": "file"
-    },
-    {
-      "path": "gatsby-node.js",
-      "accessCount": 1,
-      "lastAccessed": 1775910624319,
-      "type": "file"
-    },
-    {
-      "path": "gatsby-browser.js",
-      "accessCount": 1,
-      "lastAccessed": 1775910624469,
-      "type": "file"
-    },
-    {
-      "path": "src/utils/page.ts",
-      "accessCount": 1,
-      "lastAccessed": 1775910640190,
-      "type": "file"
-    },
-    {
-      "path": "src/templates/blog-home.js",
-      "accessCount": 1,
-      "lastAccessed": 1775910640542,
-      "type": "file"
-    },
-    {
-      "path": "src/components/layout.js",
-      "accessCount": 1,
-      "lastAccessed": 1775910644399,
-      "type": "file"
-    },
-    {
-      "path": "postcss.config.js",
-      "accessCount": 1,
-      "lastAccessed": 1775910650848,
-      "type": "file"
-    },
-    {
-      "path": "src/components/posts/list/Layout.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1775910653351,
-      "type": "file"
-    },
-    {
-      "path": ".prettierrc",
-      "accessCount": 1,
-      "lastAccessed": 1775910899329,
+      "lastAccessed": 1776005685438,
       "type": "file"
     },
     {
       "path": ".claude/skills/git-commit.md",
       "accessCount": 1,
-      "lastAccessed": 1775910981928,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/openspec.md",
-      "accessCount": 1,
-      "lastAccessed": 1775910984270,
-      "type": "file"
-    },
-    {
-      "path": "src/templates/profile.js",
-      "accessCount": 1,
-      "lastAccessed": 1775912826157,
+      "lastAccessed": 1776010015069,
       "type": "file"
     }
   ],

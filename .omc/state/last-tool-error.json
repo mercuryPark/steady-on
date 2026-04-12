@@ -1,7 +1,0 @@
-{
-  "tool_name": "Read",
-  "tool_input_preview": "{\"file_path\":\"/Users/hoyeon/Documents/workspace/steady-on/docs/CAREER.md\"}",
-  "error": "File does not exist. Note: your current working directory is /Users/hoyeon/Documents/workspace/steady-on.",
-  "timestamp": "2026-04-11T12:55:19.983Z",
-  "retry_count": 1
-}
