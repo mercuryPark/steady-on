@@ -28,7 +28,7 @@ module.exports = {
     //   Google Search Console — https://search.google.com/search-console
     //   Naver Search Advisor  — https://searchadvisor.naver.com
     verification: {
-      google: `Xn75NVZzo5PfLRpcHKeF2duydRCgRv4J6TTOES2RNXY`,
+      google: `rjQveyb7XmXjx4UgUsVGgfFwE0X8J2iLEQbarw3SoWE`,
       naver: ``,
     },
   },
