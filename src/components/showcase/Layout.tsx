@@ -13,14 +13,16 @@ const ShowCaseLayout = ({
   path: string[]
   posts: any[]
 }): any => {
-  if (path.length === 2) {
+  const isHome = path.length === 2 && path[1] === ""
+
+  if (isHome) {
     return (
       <div className="w-full h-[500px]">
         <motion.div
           initial={{ x: "-5%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0 }}
-          transition={{ type: "tween", duration: 1.2 }}
+          transition={{ type: "tween", duration: 0.4 }}
           className="flex gap-5 w-full h-full"
         >
           <SignBoard posts={posts} />
@@ -29,6 +31,8 @@ const ShowCaseLayout = ({
       </div>
     )
   }
+
+  return null
 }
 
 export default ShowCaseLayout

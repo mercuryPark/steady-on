@@ -1,49 +1,16 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Pagination from "../components/posts/list/Pagination"
 
 const BlogList = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
-  const { currentPage, numPages } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : `/${currentPage - 1}`
-  const nextPage = `/${currentPage + 1}`
+  const { currentPage, numPages, tags } = pageContext
 
   return (
-    <Layout>
-      <h1>블로그 포스트</h1>
-      {posts.map(({ node }) => (
-        <article key={node.id}>
-          <h2>
-            <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-          </h2>
-          <p>{node.frontmatter.date}</p>
-          <p>{node.excerpt}</p>
-        </article>
-      ))}
-
-      <nav>
-        {!isFirst && (
-          <Link to={prevPage} rel="prev">
-            ← 이전 페이지
-          </Link>
-        )}
-        {Array.from({ length: numPages }, (_, i) => (
-          <Link
-            key={`pagination-number${i + 1}`}
-            to={i === 0 ? "/" : `/${i + 1}`}
-          >
-            {i + 1}
-          </Link>
-        ))}
-        {!isLast && (
-          <Link to={nextPage} rel="next">
-            다음 페이지 →
-          </Link>
-        )}
-      </nav>
+    <Layout posts={posts} tags={tags}>
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   )
 }
@@ -75,6 +42,14 @@ export const blogListQuery = graphql`
             title
             subtitle
             date(formatString: "MMMM DD, YYYY")
+            tags
+            shorts
+            signboard
+            thumbnail_image {
+              childImageSharp {
+                gatsbyImageData(width: 300, placeholder: BLURRED)
+              }
+            }
           }
           excerpt
         }

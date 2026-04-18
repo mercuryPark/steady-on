@@ -40,14 +40,15 @@ const ListTocLayout = ({ items }: any): any => {
   }, [])
 
   return (
-    <div className="w-1/2 max-xl:hidden">
+    <aside className="w-60 flex-shrink-0 max-xl:hidden">
       <div className="sticky flex-1 top-[120px] ">
         <nav
+          aria-label="목차"
           className="toc sticky"
           dangerouslySetInnerHTML={{ __html: items }}
         />
       </div>
-    </div>
+    </aside>
   )
 }
 

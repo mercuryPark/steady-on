@@ -23,7 +23,11 @@ const BlogPostTemplate = ({
     <Layout location={location} title={siteTitle}>
       <div className="flex flex-col ">
         <div className="flex gap-12 h-full ">
-          <article itemScope itemType="http://schema.org/Article">
+          <article
+            className="flex-1 min-w-0"
+            itemScope
+            itemType="http://schema.org/Article"
+          >
             <section
               className="blog-post"
               dangerouslySetInnerHTML={{ __html: post.html }}

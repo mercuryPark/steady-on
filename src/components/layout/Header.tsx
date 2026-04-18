@@ -1,27 +1,13 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect } from "react"
 import { Link } from "gatsby"
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
-import { useColorMode } from "@chakra-ui/react"
 
 const Header = () => {
   const elementRef = useRef<any>(null)
-  const [darkMode, setDarkMode] = useState(false)
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  const handleClickDarkMode = () => {
-    // setDarkMode(prev => {
-    //   localStorage.setItem("darkMode", JSON.stringify(!prev))
-    //   return !prev
-    // })
-    // ! 일시 비활성화
-    // toggleColorMode()
-  }
 
   useEffect(() => {
     const handleScroll = () => {
       if (elementRef.current && typeof window !== "undefined") {
         if (window.scrollY > 10) {
-          // 100px 스크롤 시
           elementRef.current.classList.add("shadow-sm")
         } else {
           elementRef.current.classList.remove("shadow-sm")
@@ -42,29 +28,43 @@ const Header = () => {
     <div
       id="header"
       ref={elementRef}
-      className="bg-white z-[9999999999] font-bold fixed w-full left-0 top-0 px-6 py-4 transition-all duration-100"
+      className="bg-white z-[9999999999] fixed w-full left-0 top-0 px-6 py-4 transition-all duration-100"
     >
-      <div className=" flex items-center justify-between">
-        <Link to={"/"} itemProp="url">
-          {/* <h1 className="">Steady On</h1> */}
-          <img src="/images/letter-h.png" className="size-8" alt="Letter H" />
+      <div className="flex items-center justify-between max-w-[72rem] mx-auto">
+        <Link
+          to={"/"}
+          itemProp="url"
+          className="flex items-center gap-2"
+          aria-label="Steady On 홈"
+        >
+          <img
+            src="/images/letter-h.png"
+            className="size-8"
+            alt="Steady On 로고"
+          />
+          <span className="title-font text-lg">Steady On</span>
         </Link>
 
-        <div className="flex items-center gap-4 text-sm">
-          {/* <Link to={"/profile"}>
-            <button>About</button>
-          </Link>
-          <button
-            onClick={handleClickDarkMode}
-            className="shadow-md ring-1 ring-gray-300 rounded-full p-2 transition-all delay-200 relative"
+        <nav aria-label="주요" className="flex items-center gap-6 text-sm">
+          <Link
+            to={"/"}
+            className="text-gray-700 hover:text-gray-900 transition-colors"
           >
-            {darkMode ? (
-              <SunIcon className="size-4" />
-            ) : (
-              <MoonIcon className="size-4" />
-            )}
-          </button> */}
-        </div>
+            Blog
+          </Link>
+          <Link
+            to={"/tags"}
+            className="text-gray-700 hover:text-gray-900 transition-colors"
+          >
+            Tags
+          </Link>
+          <Link
+            to={"/profile"}
+            className="text-gray-700 hover:text-gray-900 transition-colors"
+          >
+            About
+          </Link>
+        </nav>
       </div>
     </div>
   )

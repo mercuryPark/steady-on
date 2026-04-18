@@ -54,7 +54,7 @@ const SignBoard = ({ posts }: any) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots: any) => (
-      <div className="bg-blue-500 size-20">
+      <div className="flex justify-end px-4 pt-2">
         <ul style={{ margin: "0px" }}>{dots}</ul>
       </div>
     ),
@@ -69,9 +69,9 @@ const SignBoard = ({ posts }: any) => {
   return (
     <div className="signboard md:w-2/3 max-md:w-full h-full text-start relative m-auto">
       <div className="flex justify-between mx-4">
-        <h1 id="title" className="text-xl">
+        <h2 className="title-font text-xl">
           SignBoard
-        </h1>
+        </h2>
         <ul className="flex  justify-end ">
           <li className="mb-0 ">
             <button

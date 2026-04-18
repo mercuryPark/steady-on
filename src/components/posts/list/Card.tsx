@@ -21,7 +21,7 @@ const PostCard = ({ post, className, imageClassName }: any) => {
             <GatsbyImage
               image={image}
               className="w-full object-contain h-full  rounded-lg hover:bg-black"
-              alt="image"
+              alt={post?.node.frontmatter?.title ?? "블로그 포스트 썸네일"}
             />
           )}
 
@@ -38,7 +38,7 @@ const PostCard = ({ post, className, imageClassName }: any) => {
         </div>
 
         <div className="py-2">
-          <h1 className="font-bold text-lg">{post?.node.frontmatter?.title}</h1>
+          <h2 className="font-bold text-lg">{post?.node.frontmatter?.title}</h2>
 
           <p className="text-xs text-gray-400">
             {moment(post?.node.frontmatter?.date).format("ll")}
