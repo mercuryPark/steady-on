@@ -15,7 +15,13 @@ const NotFoundPage = ({ data, location }) => {
   )
 }
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = ({ location }) => (
+  <Seo
+    title="404: Not Found"
+    description="요청하신 페이지를 찾을 수 없습니다."
+    pathname={location?.pathname}
+  />
+)
 
 export default NotFoundPage
 

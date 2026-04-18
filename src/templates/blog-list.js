@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const BlogList = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
@@ -46,6 +47,14 @@ const BlogList = ({ data, pageContext }) => {
     </Layout>
   )
 }
+
+export const Head = ({ location, pageContext }) => (
+  <Seo
+    title={`블로그 포스트 — ${pageContext.currentPage}페이지`}
+    description="프론트엔드 개발자 박호연의 개발 이야기 모음."
+    pathname={location?.pathname}
+  />
+)
 
 export default BlogList
 

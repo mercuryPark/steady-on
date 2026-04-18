@@ -43,12 +43,43 @@ const BlogPostTemplate = ({
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
+export const Head = ({ data: { markdownRemark: post }, location }) => {
+  const siteUrl = "https://staysteady.netlify.app"
+  const url = `${siteUrl}${location.pathname}`
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.frontmatter.title,
+    description: post.frontmatter.description || post.excerpt,
+    datePublished: post.frontmatter.rawDate,
+    dateModified: post.frontmatter.rawDate,
+    author: {
+      "@type": "Person",
+      name: "박호연",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Person",
+      name: "박호연",
+      url: siteUrl,
+    },
+    inLanguage: "ko-KR",
+    keywords: Array.isArray(post.frontmatter.tags)
+      ? post.frontmatter.tags.join(", ")
+      : undefined,
+  }
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
-    />
+      pathname={location.pathname}
+      article
+      publishedTime={post.frontmatter.rawDate}
+      tags={post.frontmatter.tags}
+    >
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+    </Seo>
   )
 }
 
@@ -75,6 +106,7 @@ export const pageQuery = graphql`
         title
         subtitle
         date(formatString: "MMMM DD, YYYY")
+        rawDate: date
         description
         tags
       }

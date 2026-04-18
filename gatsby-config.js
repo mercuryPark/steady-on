@@ -9,15 +9,27 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Steady On`,
+    titleTemplate: `%s | Steady On`,
     author: {
       name: `박호연`,
       summary: `매일 매일 꾸준한 Steady On`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `프론트엔드 개발자 박호연의 기술 블로그 & 포트폴리오. 꾸준함을 무기로 매일 한 걸음씩 성장하는 개발 이야기.`,
+    siteUrl: `https://staysteady.netlify.app`,
+    image: `/images/profile-hoyeon.jpeg`,
+    locale: `ko_KR`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
+      github: `mercuryPark`,
+    },
+    // 검색엔진 등록 후 웹마스터도구에서 발급받은 토큰을 채워 넣는다.
+    // 등록 URL:
+    //   Google Search Console — https://search.google.com/search-console
+    //   Naver Search Advisor  — https://searchadvisor.naver.com
+    verification: {
+      google: ``,
+      naver: ``,
     },
   },
   plugins: [
@@ -134,7 +146,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Steady On RSS Feed",
           },
         ],
       },
@@ -151,6 +163,46 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `static/images/letter-h.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // output 경로는 디렉토리로 취급되어 내부에 sitemap-index.xml / sitemap-0.xml 이 생성된다.
+        // 루트("/")로 두면 https://도메인/sitemap-index.xml 로 깔끔하게 노출된다.
+        output: `/`,
+        excludes: [`/404`, `/404.html`, `/dev-404-page`, `/offline-plugin-app-shell-fallback`],
+        query: `
+          {
+            site { siteMetadata { siteUrl } }
+            allSitePage { nodes { path } }
+          }
+        `,
+        resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
+        resolvePages: ({ allSitePage: { nodes } }) => nodes,
+        serialize: ({ path }) => ({
+          url: path,
+          changefreq: `weekly`,
+          priority: path === `/` ? 1.0 : 0.7,
+          lastmod: new Date().toISOString(),
+        }),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://staysteady.netlify.app`,
+        sitemap: `https://staysteady.netlify.app/sitemap-index.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: `*`, disallow: [`/`] }],
+          },
+          production: {
+            policy: [{ userAgent: `*`, allow: `/` }],
+          },
+        },
+        resolveEnv: () =>
+          process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || `development`,
       },
     },
   ],
